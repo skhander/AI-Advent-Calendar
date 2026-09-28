@@ -26,3 +26,9 @@ Keep homepage attribution as an understated copyright credit at the bottom right
 **Why:** The user explicitly moved the attribution away from the hero and asked for the remaining homepage content to shift upward.
 
 **How to apply:** Preserve the hero-to-house spacing when editing the homepage; avoid using the attribution as supporting headline copy.
+
+Keep the homepage headline editorial but spacious: moderate semibold weight, normal letter spacing, cream text, and one line on desktop.
+
+**Why:** The user explicitly rejected an oversized, tightly packed display treatment and asked for elegant, highly legible proportions instead.
+
+**How to apply:** Check the desktop line break and mobile wrap after headline typography changes; do not tighten tracking to force the desktop line.
