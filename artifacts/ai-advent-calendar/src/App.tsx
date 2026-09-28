@@ -228,10 +228,9 @@ function InferenceLesson({ openDoor }: { openDoor: (number: number) => void }) {
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
       </header>
       <main className="lesson-main inference-main" data-testid="content-lesson-2">
-        <div className="lesson-topline"><span>The AI advent / Door 2</span><span>2 of nine doors</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 2</span></div>
         <section className="inference-hero" aria-labelledby="inference-title">
           <div className="inference-hero-copy">
-            <span className="hero-index">A new idea to spin around</span>
             <h1 id="inference-title">Inference</h1>
             <p className="inference-subtitle">What happens when a trained model meets your question.</p>
           </div>
@@ -259,6 +258,7 @@ function InferenceLesson({ openDoor }: { openDoor: (number: number) => void }) {
           </figure>
         </section>
 
+        <div className="inference-section-pair">
         <section className="inference-section" aria-labelledby="inference-how-heading">
           <div className="inference-section-heading"><span className="section-kicker">1 / under the hood</span><h2 id="inference-how-heading">How it works</h2></div>
           <ol className="inference-steps">
@@ -276,6 +276,7 @@ function InferenceLesson({ openDoor }: { openDoor: (number: number) => void }) {
             <article><span className="inference-use-mark" aria-hidden="true">✦</span><h3>Vision systems</h3><p>Identify objects or defects on a factory line in real time.</p></article>
           </div>
         </section>
+        </div>
 
         <section className="inference-picture" aria-labelledby="inference-picture-heading">
           <span className="section-kicker">3 / picture it</span>

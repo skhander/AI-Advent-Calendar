@@ -1390,3 +1390,34 @@ a { color: inherit; }
   .semantic-visual-body { grid-template-columns: minmax(0, 1fr); }
   .lesson-content { grid-template-columns: 1fr; }
 }
+
+/* Pair the two numbered Inference sections only when both have enough room. */
+.inference-section-pair .inference-section:not(.inference-uses) {
+  padding-inline: clamp(20px, 3vw, 32px);
+}
+@media (min-width: 1100px) {
+  .inference-section-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .inference-section-pair .inference-section {
+    display: block;
+    min-width: 0;
+    padding: 38px 32px 46px;
+  }
+  .inference-section-pair .inference-section-heading {
+    margin-bottom: 32px;
+  }
+  .inference-section-pair .inference-uses {
+    padding-bottom: 46px;
+  }
+  .inference-section-pair .inference-use-list article {
+    grid-template-columns: 25px minmax(0, 1fr);
+    gap: 5px 12px;
+  }
+  .inference-section-pair .inference-use-list p {
+    grid-column: 2;
+  }
+}
