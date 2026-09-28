@@ -1,0 +1,1 @@
+- [Calendar visual scope](calendar-visual-scope.md) — keep the holiday house on home; use diagram-first, non-seasonal layouts for individual concept lessons.
