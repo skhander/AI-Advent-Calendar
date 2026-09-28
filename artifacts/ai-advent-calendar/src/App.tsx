@@ -61,10 +61,9 @@ function Reindeer() {
 
 function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: number) => void }) {
   const [, navigate] = useLocation();
-  const nextDoor = lessons.find(lesson => !opened.includes(lesson.number))?.number ?? 1;
   useEffect(() => {
-    document.title = 'the AI advent | Learn one AI concept a day.';
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Learn one AI concept a day. 9 days. 9 concepts. Open a door.');
+    document.title = 'the AI advent | One AI concept. Every day.';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'One AI concept. Every day. Explore nine concepts through an interactive advent house.');
   }, []);
 
   function visit(number: number) {
@@ -81,17 +80,17 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
       </header>
       <main>
         <section className="hero" aria-labelledby="home-title">
-          <h1 id="home-title">Learn one AI concept a day.</h1>
-          <p className="hero-sub">9 days. 9 concepts.</p>
+          <h1 id="home-title">One AI concept. Every day.</h1>
+          <p className="hero-sub">One concept at a time.</p>
+          <p className="hero-meta">9 days. 9 concepts.</p>
           <div className="home-progress" aria-live="polite">
             <div className="progress-track" role="progressbar" aria-label="Doors opened" aria-valuemin={0} aria-valuemax={lessons.length} aria-valuenow={opened.length}>
               <span className="progress-fill" style={{ width: `${(opened.length / lessons.length) * 100}%` }} />
             </div>
-            <span className="progress-line" data-testid="status-progress">{opened.length} / {lessons.length}</span>
+            <span className="progress-line" data-testid="status-progress">{opened.length} of {lessons.length}</span>
           </div>
         </section>
 
-        <div className="house-stage">
         <div className="scene" id="doors" aria-label="Illustrated advent house with nine interactive doors">
           <div className="moon" aria-hidden="true" />
           <span className="star s1" aria-hidden="true">✦</span><span className="star s2" aria-hidden="true">✦</span><span className="star s3" aria-hidden="true">✦</span>
@@ -128,13 +127,6 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
             </div>
             <div className="house-plinth" aria-hidden="true" />
           </div>
-        </div>
-        <aside className="house-callout">
-          <button type="button" className="hero-door-link" onClick={() => visit(nextDoor)} data-testid="link-open-a-door">
-            Open a door <ArrowRight size={15} aria-hidden="true" />
-          </button>
-          <p>Each one starts with a clear explanation and a visual guide.</p>
-        </aside>
         </div>
       </main>
     </div>
@@ -187,6 +179,7 @@ function RagLesson({ openDoor }: { openDoor: (number: number) => void }) {
           </figure>
         </section>
 
+        <div className="lesson-section-pair">
         <section className="rag-section rag-how" aria-labelledby="rag-how-heading">
           <div className="rag-section-heading"><span className="section-kicker">1 / under the hood</span><h2 id="rag-how-heading">How it works</h2></div>
           <ol className="rag-steps">
@@ -205,6 +198,7 @@ function RagLesson({ openDoor }: { openDoor: (number: number) => void }) {
           </div>
         </section>
 
+        </div>
         <section className="rag-picture" aria-labelledby="rag-picture-heading">
           <div className="rag-picture-top"><span className="section-kicker">3 / picture it</span></div>
           <h2 id="rag-picture-heading">Think of it like this: <em>Giving the model a trusted cheat sheet</em></h2>
@@ -258,7 +252,7 @@ function InferenceLesson({ openDoor }: { openDoor: (number: number) => void }) {
           </figure>
         </section>
 
-        <div className="inference-section-pair">
+        <div className="lesson-section-pair">
         <section className="inference-section" aria-labelledby="inference-how-heading">
           <div className="inference-section-heading"><span className="section-kicker">1 / under the hood</span><h2 id="inference-how-heading">How it works</h2></div>
           <ol className="inference-steps">
@@ -301,10 +295,9 @@ function EmbeddingsLesson({ openDoor }: { openDoor: (number: number) => void }) 
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
       </header>
       <main className="lesson-main embeddings-main" data-testid="content-lesson-3">
-        <div className="lesson-topline"><span>The AI advent / Door 3</span><span>3 of nine doors</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 3</span></div>
         <section className="emb-hero" aria-labelledby="embeddings-title">
           <div className="emb-hero-copy">
-            <span className="emb-eyebrow"><span className="emb-eyebrow-line" /> A lesson in finding connection</span>
             <h1 id="embeddings-title">Embeddings<span>.</span></h1>
             <p>How words become points on a map of meaning.</p>
             <div className="emb-hero-foot"><span>DOOR 3 / 9</span><span>THE AI ADVENT</span></div>
@@ -342,6 +335,7 @@ function EmbeddingsLesson({ openDoor }: { openDoor: (number: number) => void }) 
         </figure>
         </section>
 
+        <div className="lesson-section-pair">
         <section className="emb-section" aria-labelledby="emb-how-heading">
           <div className="emb-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="emb-how-heading">How it<br /><em>works</em></h2></div>
           <ol className="emb-steps">
@@ -360,6 +354,7 @@ function EmbeddingsLesson({ openDoor }: { openDoor: (number: number) => void }) 
           </div>
         </section>
 
+        </div>
         <section className="emb-picture" aria-labelledby="emb-picture-heading">
           <div className="emb-picture-label"><span className="section-kicker">3 / picture it</span></div>
           <h2 id="emb-picture-heading">Think of it like this: <em>A map organized by meaning</em></h2>
@@ -389,10 +384,9 @@ function TokensLesson({ openDoor }: { openDoor: (number: number) => void }) {
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
       </header>
       <main className="lesson-main tokens-main" data-testid="content-lesson-5">
-        <div className="lesson-topline"><span>The AI advent / Door 5</span><span>5 of nine doors</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 5</span></div>
         <section className="tokens-hero" aria-labelledby="tokens-title">
           <div className="tokens-hero-copy">
-            <span className="tokens-eyebrow">a closer look at Tokens</span>
             <h1 id="tokens-title">Tokens<span>.</span></h1>
             <p>Why AI counts pieces of words instead of whole sentences.</p>
             <div className="tokens-hero-foot"><span>THE AI ADVENT</span><span>DOOR 5 / 9</span></div>
@@ -422,6 +416,7 @@ function TokensLesson({ openDoor }: { openDoor: (number: number) => void }) {
         </figure>
         </section>
 
+        <div className="lesson-section-pair">
         <section className="tokens-section" aria-labelledby="tokens-how-heading">
           <div className="tokens-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="tokens-how-heading">How it<br /><em>works</em></h2></div>
           <ol className="tokens-steps">
@@ -438,6 +433,7 @@ function TokensLesson({ openDoor }: { openDoor: (number: number) => void }) {
             <article><span className="tokens-use-mark" aria-hidden="true" /><div><h3>Streaming responses</h3><p>Show an answer arriving piece by piece as new tokens are generated.</p></div></article>
           </div>
         </section>
+        </div>
         <section className="tokens-picture" aria-labelledby="tokens-picture-heading">
           <span className="section-kicker">3 / picture it</span>
           <h2 id="tokens-picture-heading">Think of it like this: <em>Text cut into manageable pieces</em></h2>
@@ -461,10 +457,9 @@ function ContextWindowLesson({ openDoor }: { openDoor: (number: number) => void 
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
       </header>
       <main className="lesson-main context-main" data-testid="content-lesson-4">
-        <div className="lesson-topline"><span>The AI advent / Door 4</span><span>4 of nine doors</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 4</span></div>
         <section className="context-hero" aria-labelledby="context-title">
           <div className="context-hero-copy">
-            <span className="context-overline">An invitation to understand</span>
             <h1 id="context-title">Context<br /><em>Window</em><span className="context-period">.</span></h1>
             <p>The amount of conversation an AI can hold at once.</p>
             <span className="context-hero-rule" aria-hidden="true" />
@@ -493,6 +488,7 @@ function ContextWindowLesson({ openDoor }: { openDoor: (number: number) => void 
         </figure>
         </section>
 
+        <div className="lesson-section-pair">
         <section className="context-section" aria-labelledby="context-how-heading">
           <div className="context-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="context-how-heading">How it <em>works</em></h2></div>
           <ol className="context-steps">
@@ -511,6 +507,7 @@ function ContextWindowLesson({ openDoor }: { openDoor: (number: number) => void 
           </div>
         </section>
 
+        </div>
         <section className="context-picture" aria-labelledby="context-picture-heading">
           <div className="context-picture-top"><span className="section-kicker">3 / picture it</span></div>
           <h2 id="context-picture-heading">Think of it like this: <em>The model’s working space</em></h2>
@@ -534,10 +531,9 @@ function SemanticSearchLesson({ openDoor }: { openDoor: (number: number) => void
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
       </header>
       <main className="lesson-main semantic-main" data-testid="content-lesson-6">
-        <div className="lesson-topline"><span>The AI advent / Door 6</span><span>6 of nine doors</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 6</span></div>
         <section className="semantic-hero" aria-labelledby="semantic-title">
           <div className="semantic-hero-copy">
-            <span className="semantic-eyebrow"><span className="semantic-eyebrow-line" /> An invitation to look closer</span>
             <h1 id="semantic-title">Semantic<br /><em>Search</em><span>.</span></h1>
             <p>Finding the right result even when the words do not match.</p>
             <div className="semantic-hero-foot"><span>THE AI ADVENT</span><span>DOOR 6 / 9</span></div>
@@ -564,6 +560,7 @@ function SemanticSearchLesson({ openDoor }: { openDoor: (number: number) => void
         </figure>
         </section>
 
+        <div className="lesson-section-pair">
         <section className="semantic-section semantic-how" aria-labelledby="semantic-how-heading">
           <div className="semantic-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="semantic-how-heading">How it<br /><em>works</em></h2><span className="semantic-section-aside">FROM LANGUAGE TO RELEVANCE</span></div>
           <ol className="semantic-steps">
@@ -582,6 +579,7 @@ function SemanticSearchLesson({ openDoor }: { openDoor: (number: number) => void
           </div>
         </section>
 
+        </div>
         <section className="semantic-picture" aria-labelledby="semantic-picture-heading">
           <div className="semantic-picture-top"><span className="section-kicker">3 / picture it</span></div>
           <h2 id="semantic-picture-heading">Think of it like this: <em>Searching for the idea, not only the words</em></h2>
@@ -605,10 +603,9 @@ function McpLesson({ openDoor }: { openDoor: (number: number) => void }) {
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
       </header>
       <main className="lesson-main mcp-main" data-testid="content-lesson-7">
-        <div className="lesson-topline"><span>The AI advent / Door 7</span><span>7 of nine doors</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 7</span></div>
         <section className="mcp-hero" aria-labelledby="mcp-title">
           <div className="mcp-hero-copy">
-            <span className="mcp-hero-eyebrow">A common language for connection</span>
             <h1 id="mcp-title">MCP<span>.</span></h1>
             <p>A shared way for AI to connect to the tools around it.</p>
             <div className="mcp-hero-foot"><span>Door 7 / 9</span><span>The AI advent</span></div>
@@ -633,6 +630,7 @@ function McpLesson({ openDoor }: { openDoor: (number: number) => void }) {
         </figure>
         </section>
 
+        <div className="lesson-section-pair">
         <section className="mcp-section" aria-labelledby="mcp-how-heading">
           <div className="mcp-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="mcp-how-heading">How it<br /><em>works</em></h2></div>
           <ol className="mcp-steps">
@@ -651,6 +649,7 @@ function McpLesson({ openDoor }: { openDoor: (number: number) => void }) {
           </div>
         </section>
 
+        </div>
         <section className="mcp-picture" aria-labelledby="mcp-picture-heading">
           <span className="section-kicker">3 / picture it</span>
           <h2 id="mcp-picture-heading">Think of it like this: <em>A standard connection for AI tools</em></h2>
@@ -674,10 +673,9 @@ function ModelsLesson({ openDoor }: { openDoor: (number: number) => void }) {
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
       </header>
       <main className="lesson-main models-main" data-testid="content-lesson-8">
-        <div className="lesson-topline"><span>The AI advent / Door 8</span><span>8 of nine doors</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 8</span></div>
         <section className="models-hero" aria-labelledby="models-title">
           <div className="models-hero-copy">
-            <span className="section-kicker">A field guide / 08</span>
             <h1 id="models-title">Models<span className="models-period">.</span></h1>
             <p>Why there is no single “best” AI for every job.</p>
           </div>
@@ -702,6 +700,7 @@ function ModelsLesson({ openDoor }: { openDoor: (number: number) => void }) {
         </figure>
         </section>
 
+        <div className="lesson-section-pair">
         <section className="models-section" aria-labelledby="models-how-heading">
           <div className="models-section-heading"><span className="section-kicker">1 / under the hood</span><h2 id="models-how-heading">How it works</h2></div>
           <ol className="models-steps">
@@ -720,6 +719,7 @@ function ModelsLesson({ openDoor }: { openDoor: (number: number) => void }) {
           </div>
         </section>
 
+        </div>
         <section className="models-picture" aria-labelledby="models-picture-heading">
           <span className="section-kicker">3 / picture it</span>
           <h2 id="models-picture-heading">Think of it like this: <em>Different engines for different jobs</em></h2>
@@ -786,22 +786,21 @@ function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
             <p>Each layer catches different failures; no single check guarantees safety.</p>
           </figure>
         </section>
-        <div className="lesson-content">
-          <article className="lesson-panel">
-            <span className="section-kicker">2 / Why a PM should care</span>
-            <h2>Bring it back to product.</h2>
+        <div className="lesson-section-pair lesson-nine-sections">
+          <section className="lesson-panel" aria-labelledby="lesson-nine-product">
+            <div className="lesson-nine-section-heading"><span className="section-kicker">1 / Why a PM should care</span><h2 id="lesson-nine-product">Bring it back to product.</h2></div>
             <p>{lesson.pmRelevance}</p>
-            <div className="divider" />
-            <span className="section-kicker">3 / In the wild</span>
-            <h2>A concrete example.</h2>
+          </section>
+          <section className="lesson-panel" aria-labelledby="lesson-nine-example">
+            <div className="lesson-nine-section-heading"><span className="section-kicker">2 / In the wild</span><h2 id="lesson-nine-example">A concrete example.</h2></div>
             <p>{lesson.example}</p>
-          </article>
-          <aside className="analogy-panel">
-            <span className="section-kicker">The everyday analogy</span>
-            <h2>{lesson.analogyTitle}</h2>
-            <p>{lesson.analogy}</p>
-          </aside>
+          </section>
         </div>
+        <aside className="analogy-panel lesson-nine-analogy">
+          <span className="section-kicker">The everyday analogy</span>
+          <h2>{lesson.analogyTitle}</h2>
+          <p>{lesson.analogy}</p>
+        </aside>
         <section className="answer-panel" aria-labelledby="interview-answer">
           <div><span className="section-kicker">The interview-ready answer</span><h2 id="interview-answer">Say it like this.</h2></div>
           <blockquote>{lesson.answer}</blockquote>
