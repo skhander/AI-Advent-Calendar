@@ -735,6 +735,75 @@ function ModelsLesson({ openDoor }: { openDoor: (number: number) => void }) {
   );
 }
 
+function EvalsLesson() {
+  const lesson = lessons.find(item => item.number === 9)!;
+  return (
+    <div className="lesson-site models-site evals-site lesson-page-enter">
+      <header className="lesson-header">
+        <Brand />
+        <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
+      </header>
+      <main className="lesson-main models-main" data-testid="content-lesson-9">
+        <div className="lesson-topline"><span>The AI advent / Door 9</span></div>
+        <section className="models-hero evals-hero" aria-labelledby="evals-title">
+          <div className="models-hero-copy">
+            <h1 id="evals-title">{lesson.title}</h1>
+            <p>{lesson.subtitle}</p>
+          </div>
+        </section>
+
+        <section className="models-intro" aria-label="Evals, hallucinations and guardrails in plain English">
+          <div>
+            <span className="section-kicker">in plain English</span>
+            <p>{lesson.explanation}</p>
+          </div>
+          <figure className="eval-diagram" aria-label="Evaluation compares model answers against test examples, checks whether claims are supported by evidence, then applies layered safeguards including input checks, citations, validation, and human review.">
+            <figcaption><span className="section-kicker">A visual guide</span><strong>Trust is a process.</strong></figcaption>
+            <div className="eval-flow">
+              <div className="eval-node"><small>01 / EVALUATE</small><strong>Test examples</strong><span>Compare answers to expected behavior</span></div>
+              <div className="eval-connector" aria-hidden="true">↓</div>
+              <div className="eval-node eval-warning"><small>02 / DETECT</small><strong>Unsupported claim?</strong><span>Check each answer against evidence</span></div>
+              <div className="eval-connector" aria-hidden="true">↓</div>
+              <div className="eval-node"><small>03 / PROTECT</small><strong>Layered safeguards</strong><span>Input checks → citations → validation → human review</span></div>
+            </div>
+            <p>Each layer catches different failures; no single check guarantees safety.</p>
+          </figure>
+        </section>
+
+        <div className="lesson-section-pair">
+          <section className="models-section" aria-labelledby="evals-how-heading">
+            <div className="models-section-heading"><span className="section-kicker">1 / under the hood</span><h2 id="evals-how-heading">How it works</h2></div>
+            <ol className="models-steps evals-steps">
+              <li><span>1</span><div><small>Eval · “Is this answer good?”</small><h3>Test it</h3><p>Give the model real, edge-case, and failure-prone examples. Test against expected behavior.</p></div></li>
+              <li><span>2</span><div><small>Hallucination · “Is this answer true?”</small><h3>Check it</h3><p>Compare its answers against expected behavior or trusted sources. Check against evidence.</p></div></li>
+              <li><span>3</span><div><small>Guardrail · “What happens if it goes wrong?”</small><h3>Protect it</h3><p>Add rules, validation, permissions, or human review where mistakes matter. Add checks, limits, and escalation.</p></div></li>
+            </ol>
+          </section>
+
+          <section className="models-section models-uses" aria-labelledby="evals-uses-heading">
+            <div className="models-section-heading"><span className="section-kicker">2 / outside the lab</span><h2 id="evals-uses-heading">Real-world use</h2></div>
+            <div className="models-use-list">
+              <article><span className="models-use-index">1</span><div><h3>Shopping assistant</h3><p>Test whether recommendations match the shopper's request.</p></div></article>
+              <article><span className="models-use-index">2</span><div><h3>Customer support</h3><p>Check that answers are grounded in your help center instead of made up.</p></div></article>
+              <article><span className="models-use-index">3</span><div><h3>Medical information</h3><p>Require trusted sources and escalate questions the model shouldn't answer on its own.</p></div></article>
+            </div>
+          </section>
+        </div>
+        <section className="models-picture" aria-labelledby="evals-picture-heading">
+          <span className="section-kicker">3 / picture it</span>
+          <h2 id="evals-picture-heading">Think of it like this: <em>An AI product is like a new employee.</em></h2>
+          <p>Before letting them work alone, you give them a set of tasks to see how they perform. You watch for mistakes, check their work, and put boundaries around anything they shouldn't handle themselves.</p>
+          <p>Evals are the test. Hallucinations are the mistakes. Guardrails are the boundaries.</p>
+        </section>
+        <nav className="lesson-footer" aria-label="Lesson navigation">
+          <Link href="/" className="back-link" data-testid="link-back-home-bottom"><ArrowLeft size={16} /> All concepts</Link>
+          <Link href="/" className="next-link" data-testid="link-finish-lessons"><small>All nine doors opened →</small><span>Explore all concepts</span></Link>
+        </nav>
+      </main>
+    </div>
+  );
+}
+
 function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
   const params = useParams<{ number: string }>();
   const number = Number(params.number);
@@ -756,62 +825,8 @@ function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
   if (number === 6) return <SemanticSearchLesson openDoor={openDoor} />;
   if (number === 7) return <McpLesson openDoor={openDoor} />;
   if (number === 8) return <ModelsLesson openDoor={openDoor} />;
-  const next = lessons[number] ?? null;
-
-  return (
-    <div className="lesson-site lesson-page-enter">
-      <header className="lesson-header">
-        <Brand />
-        <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> All concepts</Link>
-      </header>
-      <main className="lesson-main" data-testid={`content-lesson-${number}`}>
-        <div className="lesson-topline"><span>The AI advent / Door {number}</span></div>
-        <div className="lesson-heading">
-          <div><h1>{lesson.title}</h1><p className="lesson-lede">{lesson.subtitle}</p></div>
-        </div>
-        <section className="lesson-nine-intro" aria-label="Evals, hallucinations and guardrails in plain English">
-          <div className="lesson-nine-copy">
-            <span className="section-kicker">in plain English</span>
-            <p>{lesson.explanation}</p>
-          </div>
-          <figure className="eval-diagram" aria-label="Evaluation compares model answers against test examples, checks whether claims are supported by evidence, then applies layered safeguards including input checks, citations, validation, and human review.">
-            <figcaption><span className="section-kicker">A visual guide</span><strong>Trust is a process.</strong></figcaption>
-            <div className="eval-flow">
-              <div className="eval-node"><small>01 / EVALUATE</small><strong>Test examples</strong><span>Compare answers to expected behavior</span></div>
-              <div className="eval-connector" aria-hidden="true">↓</div>
-              <div className="eval-node eval-warning"><small>02 / DETECT</small><strong>Unsupported claim?</strong><span>Check each answer against evidence</span></div>
-              <div className="eval-connector" aria-hidden="true">↓</div>
-              <div className="eval-node"><small>03 / PROTECT</small><strong>Layered safeguards</strong><span>Input checks → citations → validation → human review</span></div>
-            </div>
-            <p>Each layer catches different failures; no single check guarantees safety.</p>
-          </figure>
-        </section>
-        <div className="lesson-section-pair lesson-nine-sections">
-          <section className="lesson-panel" aria-labelledby="lesson-nine-product">
-            <div className="lesson-nine-section-heading"><span className="section-kicker">1 / Why a PM should care</span><h2 id="lesson-nine-product">Bring it back to product.</h2></div>
-            <p>{lesson.pmRelevance}</p>
-          </section>
-          <section className="lesson-panel" aria-labelledby="lesson-nine-example">
-            <div className="lesson-nine-section-heading"><span className="section-kicker">2 / In the wild</span><h2 id="lesson-nine-example">A concrete example.</h2></div>
-            <p>{lesson.example}</p>
-          </section>
-        </div>
-        <aside className="analogy-panel lesson-nine-analogy">
-          <span className="section-kicker">The everyday analogy</span>
-          <h2>{lesson.analogyTitle}</h2>
-          <p>{lesson.analogy}</p>
-        </aside>
-        <section className="answer-panel" aria-labelledby="interview-answer">
-          <div><span className="section-kicker">The interview-ready answer</span><h2 id="interview-answer">Say it like this.</h2></div>
-          <blockquote>{lesson.answer}</blockquote>
-        </section>
-        <nav className="lesson-footer" aria-label="Lesson navigation">
-          <Link href="/" className="back-link" data-testid="link-back-home-bottom"><ArrowLeft size={16} /> All concepts</Link>
-          {next ? <Link href={`/lesson/${next.number}`} className="next-link" onClick={() => { openDoor(next.number); window.scrollTo(0, 0); }} data-testid={`link-next-lesson-${next.number}`}><small>Open the next door →</small><span>{next.title}</span></Link> : <Link href="/" className="next-link" data-testid="link-finish-lessons"><small>All nine doors opened →</small><span>Explore all concepts</span></Link>}
-        </nav>
-      </main>
-    </div>
-  );
+  if (number === 9) return <EvalsLesson />;
+  return <NotFound />;
 }
 
 function NotFound() {

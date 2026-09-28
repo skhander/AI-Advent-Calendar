@@ -1425,3 +1425,15 @@ a { color: inherit; }
   .lesson-section-pair > .lesson-panel { border-top: 1px solid #bdcac8; }
   .lesson-nine-sections { margin-bottom: 24px; }
 }
+
+.evals-hero h1 { max-width: 1100px; font-size: clamp(48px, 6vw, 76px); letter-spacing: -.05em; }
+.evals-site .models-intro { align-items: start; }
+.evals-site .eval-diagram > p { margin: 0; max-width: none; color: #52666d; font: 11px/1.5 var(--app-font-sans); letter-spacing: normal; }
+.evals-steps li { grid-template-columns: 24px minmax(0, 1fr); gap: 12px; }
+.evals-steps small { display: block; margin-bottom: 7px; color: #a04f3d; font: 600 10px/1.5 var(--app-font-sans); letter-spacing: .04em; text-transform: uppercase; }
+.evals-steps h3 { margin: 0 0 7px; font: 500 25px/1.2 var(--app-font-serif); }
+.evals-steps p { font-size: clamp(18px, 1.8vw, 22px); line-height: 1.45; }
+.evals-site .models-picture p + p { margin-top: 22px; }
+@media (max-width: 767px) {
+  .evals-hero h1 { font-size: clamp(45px, 11vw, 65px); }
+}

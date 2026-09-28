@@ -112,10 +112,10 @@ export const lessons: Lesson[] = [
     number: 9,
     title: 'Evals, hallucinations & guardrails',
     doorTitle: 'Evals / safety',
-    subtitle: 'The part that turns a clever demo into a trustworthy product.',
+    subtitle: 'How you know an AI product works — and where it can go wrong.',
     analogyTitle: 'A dress rehearsal with safety rails.',
     analogy: 'Before opening night, you test the show with a real audience, watch where performers improvise the wrong line, and put clear boundaries around what must never happen.',
-    explanation: 'An evaluation is a repeatable way to measure model behavior on representative tasks. A hallucination is a plausible-sounding output unsupported by evidence. Guardrails are layered controls: input checks, grounding and citations, output validation, permissions, and human review. None is a guarantee on its own.',
+    explanation: "AI can sound confident and still be wrong. Evals test whether a model behaves the way you expect. Hallucinations are answers that sound right but aren't supported by the facts. Guardrails are checks that help prevent or catch those failures.",
     pmRelevance: 'Define success and unacceptable failures before launch. Build a test set of typical, edge, and adversarial cases; track quality, groundedness, latency, cost, and harm. Review failures continuously as the product and model change.',
     example: 'A medical-information assistant is tested on 300 real questions. It must cite approved materials, avoid personalized diagnosis, and escalate urgent symptoms; the team reviews every unsupported clinical claim.',
     answer: '“I would evaluate the full workflow against real user tasks, including safety and edge cases. Hallucinations are confident unsupported claims, so I would combine grounding, validation, clear refusals, human escalation, and ongoing monitoring rather than trusting one guardrail.”'

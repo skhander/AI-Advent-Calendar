@@ -1,0 +1,235 @@
+Evals, hallucinations & guardrails
+
+How you know an AI product works — and where it can go wrong.
+
+in plain English
+
+AI can sound confident and still be wrong. Evals test whether a model behaves the way you expect. Hallucinations are answers that sound right but aren't supported by the facts. Guardrails are checks that help prevent or catch those failures.
+
+testing an AI product
+
+EVAL
+“Is this answer good?”
+Test against expected behavior
+
+HALLUCINATION
+“Is this answer true?”
+Check against evidence
+
+GUARDRAIL
+“What happens if it goes wrong?”
+Add checks, limits, and escalation
+
+1 / under the hood
+
+How it works
+
+1
+
+Test it
+Give the model real, edge-case, and failure-prone examples.
+
+2
+
+Check it
+Compare its answers against expected behavior or trusted sources.
+
+3
+
+Protect it
+Add rules, validation, permissions, or human review where mistakes matter.
+
+2 / outside the lab
+
+Real-world use
+Shopping assistant
+
+Test whether recommendations match the shopper's request.
+
+Customer support
+
+Check that answers are grounded in your help center instead of made up.
+
+Medical information
+
+Require trusted sources and escalate questions the model shouldn't answer on its own.
+
+3 / picture it
+
+Think of it like this:
+
+An AI product is like a new employee.
+
+Before letting them work alone, you give them a set of tasks to see how they perform. You watch for mistakes, check their work, and put boundaries around anything they shouldn't handle themselves.
+
+Evals are the test.
+Hallucinations are the mistakes.
+Guardrails are the boundaries.
+
+SailPoint
+
+SailPoint Agentic Fabric
+
+See, govern, and secure every AI agent
+
+Ad
+Ad options
+the title font is too crazy. make it more legible
+Edit
+
+Envato
+
+Unlock great typography
+
+Millions of pro fonts for logos, web, print & more.
+
+Ad
+Ad options
+
+Paste this into Replit:
+
+Update ONLY the typography on the homepage. Keep the illustration, layout, colors, spacing, navigation, doors, and all other visual elements exactly as they are.
+
+The main headline currently feels too compressed and ornate. Make it more legible, spacious, and editorial.
+
+MAIN HEADLINE
+“Learn one AI concept a day”
+
+Use a wide, elegant editorial serif similar to Cormorant Garamond Semibold.
+- Reduce the font size slightly so the headline has more breathing room
+- Use a wider typeface / more generous proportions
+- Keep normal letter spacing — do NOT dramatically track out the letters
+- Give the words more natural horizontal breathing room
+- Keep it on one line on desktop
+- Keep the headline visually prominent, but less oversized
+- Use a medium/semi-bold weight rather than an extremely heavy display weight
+- Maintain the existing cream color
+
+The goal is:
+elegant, editorial, spacious, highly legible — not ornate or tightly packed.
+
+SECONDARY TEXT
+“9 DAYS · 9 CONCEPTS”
+
+Use a clean modern sans-serif.
+- Small
+- Uppercase
+- Letter-spacing around 0.12em
+- Keep it understated
+
+PROGRESS TEXT
+“9 / 9”
+
+Use the same clean sans-serif as the secondary text.
+Keep it small and subtle.
+
+HEADER
+“the AI advent”
+
+Keep the existing serif style, but make sure it remains crisp and legible.
+
+DOOR LABELS
+Keep the existing serif style, but slightly increase readability:
+- Medium weight
+- Slightly more letter spacing
+- Keep labels centered
+- Do not change the door sizes or layout
+
+IMPORTANT:
+Do not redesign the page.
+Do not change the illustration.
+Do not change the color palette.
+Do not add new elements.
+Do not change the overall composition.
+
+This is a typography refinement only.
+
+The desired feeling is:
+editorial + warm + premium + playful + spacious.
+
+Think: a beautifully designed holiday editorial, not an AI course landing page.
+For the Replit prompt, here’s an AI app builder option to consider.
+
+Cybernews
+
+Best AI App Builder 2026
+
+Top AI app builders, tested for 2026.
+
+Ad
+Ad options
+should I add a period to the title?
+
+No — I’d keep the period off.
+
+Learn one AI concept a day
+
+It reads as a headline/tagline, not a sentence. The lack of punctuation makes it feel cleaner, more editorial, and more like a product identity.
+
+I’d use punctuation elsewhere to create rhythm:
+
+Learn one AI concept a day
+9 DAYS · 9 CONCEPTS
+
+That contrast is enough.
+
+what you shared isn't the same font family
+
+You're right. I over-indexed on changing the typeface. If you like the current font family, don't change it. The problem is primarily scale + tracking + weight, not the family.
+
+Looking at your screenshot, I'd keep the existing display serif and make it more open.
+
+Use this Replit prompt instead:
+
+Update ONLY the typography of the main headline.
+
+IMPORTANT: Keep the EXACT SAME FONT FAMILY currently being used. Do not replace it with Cormorant, Playfair, DM Serif, or another serif.
+
+Headline:
+“Learn one AI concept a day”
+
+The current typeface is good, but the headline feels too dense and compressed.
+
+Make it more legible and spacious by:
+- Keeping the exact same font family
+- Reducing the font size slightly, around 5–10%
+- Increasing letter-spacing slightly, around 0.01em–0.02em
+- Increasing word spacing slightly so the words have more breathing room
+- Use a slightly lighter weight if the current weight is very heavy
+- Keep it on one line on desktop
+- Keep the cream color
+- Keep the existing centered alignment
+
+Do NOT dramatically track out the letters. I want subtle, natural spacing — not a fashion-magazine stretched effect.
+
+The goal is for the SAME FONT to feel:
+cleaner, wider, calmer, and more legible.
+
+Do not change:
+- font family
+- illustration
+- layout
+- colors
+- header
+- doors
+- progress bar
+- overall composition
+
+This is a small typography refinement, not a redesign.
+
+And visually, I'd aim for something like:
+
+Learn one AI concept a day
+
+rather than changing to a different serif.
+
+The key is “same font, more air.” That will preserve the visual identity you've already established.
+
+Envato
+
+Unlock great typography
+
+Millions of pro fonts for logos, web, print & more.
+
+Ad
+Ad options
