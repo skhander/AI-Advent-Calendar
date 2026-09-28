@@ -758,7 +758,7 @@ function EvalsLesson() {
             <p>{lesson.explanation}</p>
           </div>
           <figure className="eval-diagram" aria-label="Evaluation compares model answers against test examples, checks whether claims are supported by evidence, then applies layered safeguards including input checks, citations, validation, and human review.">
-            <figcaption><span className="section-kicker">A visual guide</span><strong>Trust is a process.</strong></figcaption>
+            <figcaption><span className="section-kicker">A visual guide</span></figcaption>
             <div className="eval-flow">
               <div className="eval-node"><small>01 / EVALUATE</small><strong>Test examples</strong><span>Compare answers to expected behavior</span></div>
               <div className="eval-connector" aria-hidden="true">↓</div>
@@ -791,7 +791,7 @@ function EvalsLesson() {
         </div>
         <section className="models-picture" aria-labelledby="evals-picture-heading">
           <span className="section-kicker">3 / picture it</span>
-          <h2 id="evals-picture-heading">Think of it like this: <em>An AI product is like a new employee.</em></h2>
+          <h2 id="evals-picture-heading">Think of it like this: <em>An AI product is like a new intern.</em></h2>
           <p>Before letting them work alone, you give them a set of tasks to see how they perform. You watch for mistakes, check their work, and put boundaries around anything they shouldn't handle themselves.</p>
           <p>Evals are the test. Hallucinations are the mistakes. Guardrails are the boundaries.</p>
         </section>
