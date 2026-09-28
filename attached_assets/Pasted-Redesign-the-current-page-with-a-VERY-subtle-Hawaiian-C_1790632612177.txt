@@ -1,0 +1,267 @@
+Redesign the current page with a VERY subtle Hawaiian Christmas aesthetic.
+
+IMPORTANT:
+The content is the hero.
+
+This should NOT look like a "tropical Christmas themed website."
+
+It should look like the existing sophisticated AI Advent page, with a quiet visual hint of Christmas in Hawaii.
+
+PRESERVE EXACTLY:
+- existing layout
+- typography
+- headline hierarchy
+- spacing
+- navigation
+- grid
+- copy
+- section structure
+- responsive behavior
+- overall editorial design
+
+DO NOT redesign the page.
+
+DO NOT add lots of illustrations.
+
+DO NOT make the page colorful.
+
+DO NOT let the seasonal treatment compete with the content.
+
+CREATIVE DIRECTION:
+
+Think:
+
+Christmas in Hawaii, seen through a very minimalist design lens.
+
+Not:
+"tropical Christmas!"
+
+Instead:
+"a quiet December evening in Hawaii."
+
+The feeling should come from:
+- warm light
+- one tropical leaf
+- one tiny red accent
+- natural materials
+- warm cream
+- subtle ocean blue
+
+The seasonal reference should almost be discovered rather than announced.
+
+COLOR PALETTE:
+
+Use primarily:
+
+Warm ivory: #F7F4EC
+Soft sand: #E9DFCF
+Deep charcoal: #252824
+
+Very subtle accents:
+
+Muted ocean blue: #557B87
+Muted palm green: #667A68
+Soft hibiscus red: #B7655D
+Warm brass: #B29A6A
+
+IMPORTANT:
+The page should remain approximately 90% neutral.
+
+Use the tropical colors only as tiny accents.
+
+No saturated blue.
+No bright green.
+No bright Christmas red.
+
+HERO:
+
+Keep the current hero composition and typography.
+
+Remove any large tropical Christmas illustration.
+
+Instead, introduce ONE extremely subtle visual cue.
+
+Choose ONE:
+
+OPTION A:
+A single delicate tropical leaf entering the edge of the hero composition.
+
+OPTION B:
+A tiny red hibiscus flower tucked into an otherwise minimal composition.
+
+OPTION C:
+A small warm-white Christmas light subtly woven through a single tropical branch.
+
+OPTION D:
+A very minimal botanical line drawing in the background.
+
+Choose whichever looks most elegant.
+
+Do NOT combine all four.
+
+The visual should occupy no more than approximately 15–20% of the hero area.
+
+It should feel like a detail, not an illustration.
+
+CHRISTMAS:
+
+Christmas should be suggested through tiny details:
+
+- one muted red accent
+- one tiny warm light
+- a subtle star
+- natural wrapping paper texture
+- a small ribbon
+
+Do not use:
+- Santa
+- Christmas trees
+- ornaments everywhere
+- candy canes
+- snow
+- presents
+- tropical Christmas clip art
+- leis
+- large hibiscus flowers
+- palm trees
+
+HAWAII:
+
+Do not literally illustrate Hawaii.
+
+Instead suggest it through:
+- muted ocean blue
+- soft green
+- warm sand
+- one botanical detail
+- warm sunlight
+
+No beach.
+No surfboards.
+No sunsets.
+No Hawaiian shirts.
+
+The page should feel tropical without LOOKING tropical.
+
+TOKENS CONTENT:
+
+The visual treatment should reinforce the lesson without distracting from it.
+
+Keep:
+
+"Unforgettable!"
+
+"4829,0211,3470"
+
+"4 tokens, not 1 word"
+
+exactly as the conceptual centerpiece.
+
+If adding a visual metaphor, make it extremely simple.
+
+For example:
+
+A very subtle botanical line divides into four small pieces.
+
+Each piece corresponds to a token.
+
+But the content and typography must remain much more visually prominent than the seasonal treatment.
+
+SECTION DESIGN:
+
+Do NOT give every section a tropical treatment.
+
+Most sections should remain essentially unchanged.
+
+Use the seasonal palette only through:
+- tiny rules
+- small accents
+- subtle background shifts
+- occasional botanical detail
+
+The user should be able to read the entire page without ever feeling visually interrupted.
+
+IN PLAIN ENGLISH:
+
+Keep this section extremely clean.
+
+If you add anything seasonal, use one tiny botanical detail or muted red accent.
+
+UNDER THE HOOD:
+
+Keep the existing 01 / 02 / 03 structure.
+
+Use the existing information-design treatment.
+
+No tropical illustrations.
+
+OUTSIDE THE LAB:
+
+Keep this section almost completely neutral.
+
+A tiny muted green or ocean-blue accent is enough.
+
+PICTURE IT:
+
+Keep the existing explanatory diagram.
+
+If you introduce a seasonal detail, make it microscopic and secondary.
+
+DO NOT turn the explanation into a tropical illustration.
+
+VISUAL HIERARCHY:
+
+The hierarchy should be:
+
+1. CONTENT
+2. TYPOGRAPHY
+3. INFORMATION / DIAGRAMS
+4. SEASONAL ATMOSPHERE
+
+The seasonal design should NEVER compete with the lesson.
+
+If you are deciding between:
+"more festive"
+and
+"more readable"
+
+choose MORE READABLE.
+
+If you are deciding between:
+"more tropical"
+and
+"more sophisticated"
+
+choose MORE SOPHISTICATED.
+
+FINAL FEEL:
+
+Imagine a beautifully designed AI editorial page.
+
+It's December.
+
+The page has a tiny hint of Hawaii:
+a warm cream background,
+a muted ocean-blue accent,
+one delicate tropical leaf,
+and a tiny red Christmas detail.
+
+That's it.
+
+The user should think:
+
+"Something feels warm and tropical."
+
+Not:
+
+"This is a Hawaiian Christmas website."
+
+The seasonal treatment should feel like a quiet layer of art direction sitting underneath the content.
+
+MINIMAL.
+WARM.
+TROPICAL.
+CHRISTMAS.
+BARELY THERE.
+
+Preserve all existing functionality and responsive behavior.

@@ -1,0 +1,370 @@
+Redesign this page with a minimalist Swedish Christmas aesthetic.
+
+IMPORTANT:
+Do NOT redesign the layout.
+
+Preserve:
+- existing page structure
+- typography
+- serif headline
+- monospace labels
+- spacing
+- grid
+- navigation
+- copy
+- section hierarchy
+- responsive behavior
+- overall editorial feel
+
+This is an ART DIRECTION change only.
+
+CREATIVE DIRECTION
+
+I want the page to feel like a beautiful Swedish Christmas in a minimalist Scandinavian home.
+
+Think:
+
+Stockholm in December.
+Snow outside.
+Warm candlelight.
+A quiet apartment.
+Pine branches.
+Red berries.
+Natural linen.
+Wood.
+Cream paper.
+Simple Christmas ornaments.
+A single red ribbon.
+Soft winter light.
+
+The aesthetic should feel:
+
+- Scandinavian
+- warm
+- minimal
+- elegant
+- cozy
+- understated
+- tactile
+- editorial
+- quietly festive
+
+Think:
+Scandinavian design magazine × Swedish Christmas × luxury stationery.
+
+NOT:
+- maximalist Christmas
+- American Christmas
+- department-store Christmas
+- Christmas clip art
+- bright red and green
+- Santa
+- cartoon snow
+- excessive ornaments
+- glitter
+- candy canes
+
+COLOR PALETTE
+
+Use a restrained Nordic palette:
+
+Warm ivory:
+#F7F4EC
+
+Soft warm white:
+#FBF9F4
+
+Muted forest green:
+#30483A
+
+Swedish Christmas red:
+#A63D3D
+
+Pale sage:
+#A9B5A5
+
+Natural wood:
+#B59B7A
+
+Soft charcoal:
+#252824
+
+Very muted brass:
+#B5A06A
+
+The dominant palette should be:
+
+IVORY + WARM WHITE + SOFT GREEN
+
+with tiny amounts of:
+
+SWEDISH RED
+
+Red should be an accent, not a background.
+
+Think of red as:
+one ribbon,
+one berry,
+one candle,
+one tiny graphic detail.
+
+Do NOT use bright Christmas red.
+
+DO NOT use emerald green.
+
+DO NOT use shiny gold.
+
+HERO
+
+Keep the existing hero layout exactly as it is.
+
+Keep the oversized serif headline as the focal point.
+
+The hero artwork should become a minimalist Scandinavian Christmas still life.
+
+Possible composition:
+
+A small wooden table against a warm ivory wall.
+
+On it:
+- one simple ceramic candleholder
+- a single lit taper candle
+- a small pine branch
+- a few red winter berries
+- one simple paper ornament
+- a small wrapped gift with a thin red ribbon
+
+Everything should be beautifully spaced.
+
+There should be LOTS of negative space.
+
+The visual should feel like a photograph / editorial still life from a Scandinavian design magazine.
+
+IMPORTANT:
+
+Do not make the hero busy.
+
+It should look almost effortless.
+
+The beauty should come from:
+- materials
+- light
+- composition
+- negative space
+
+SCANDINAVIAN CHRISTMAS OBJECTS
+
+Use only a few authentic-feeling elements:
+
+- taper candles
+- simple paper stars
+- pine / fir branches
+- red berries
+- linen
+- natural wood
+- ceramic
+- handmade paper
+- simple red ribbon
+
+Avoid:
+- shiny ornaments
+- tinsel
+- glitter
+- elaborate wreaths
+- Christmas stockings
+- Santa
+- candy canes
+- cartoon snowmen
+- oversized Christmas trees
+
+PAPER STARS
+
+A subtle Scandinavian paper star can be one of the recurring motifs.
+
+Use it sparingly.
+
+For example:
+- one small paper star in the hero
+- a tiny star as a section accent
+- a subtle star-shaped geometric detail
+
+Do not scatter stars everywhere.
+
+CANDLES
+
+Warm candlelight should be one of the main visual cues.
+
+Use:
+- small pools of warm light
+- simple white taper candles
+- understated brass or ceramic holders
+
+The candlelight should feel natural and soft.
+
+Do not create glowing magical effects.
+
+TEXTURE
+
+Introduce subtle tactile materials:
+
+- uncoated paper
+- linen
+- raw wood
+- matte ceramic
+- soft wool
+- pine needles
+
+The page should feel physical rather than digitally decorated.
+
+Very subtle paper grain is okay.
+
+Do NOT make the texture obvious.
+
+TYPOGRAPHY
+
+DO NOT change the typography.
+
+Keep:
+- oversized serif headlines
+- small monospace labels
+- generous whitespace
+- thin rules
+- editorial hierarchy
+
+The typography should contrast with the warm, tactile imagery.
+
+Keep the existing headline treatment exactly.
+
+Use the red accent very sparingly in typography.
+
+For example:
+a tiny red period,
+a small red number,
+or a thin red rule.
+
+THE "IN PLAIN ENGLISH" SECTION
+
+Keep the existing structure.
+
+Make the visual component feel like a Scandinavian design object.
+
+For example:
+a simple cream card with:
+- one red ribbon
+- a few green pine needles
+- clean token blocks
+
+Use very thin lines and lots of whitespace.
+
+Do not decorate the entire section.
+
+UNDER THE HOOD
+
+Keep the 01 / 02 / 03 structure.
+
+Make it feel like Scandinavian editorial information design.
+
+Use:
+- ivory background
+- charcoal text
+- muted green numbers
+- tiny red accents
+- thin rules
+
+The design should feel extremely clean.
+
+OUTSIDE THE LAB
+
+Keep the existing content.
+
+Use small red / green accents to create seasonal warmth.
+
+Avoid adding illustrations to every section.
+
+PICTURE IT
+
+This section should use the strongest visual metaphor.
+
+For the Tokens concept, show:
+
+ONE WHOLE PIECE
+→
+BROKEN INTO SMALL PIECES
+→
+TOKENS
+→
+NUMBERS
+
+Make the pieces feel like simple Scandinavian paper objects.
+
+For example:
+a single sheet of beautiful cream wrapping paper being cut into small rectangular pieces.
+
+Each piece has a tiny token ID.
+
+The metaphor should be immediately understandable.
+
+SWEDISH CHRISTMAS DETAILS
+
+Use details associated with Scandinavian Christmas:
+
+- simple red-and-white paper ornaments
+- pine branches
+- candlelight
+- natural wood
+- linen
+- paper stars
+- red berries
+- handmade wrapping paper
+
+But keep them extremely restrained.
+
+A good rule:
+
+If an element doesn't make the page more beautiful, remove it.
+
+OVERALL COMPOSITION
+
+The page should have a lot of negative space.
+
+Use large areas of:
+- warm ivory
+- soft white
+- muted green
+
+Then punctuate the composition with tiny red details.
+
+The red should feel almost surprising because there is so little of it.
+
+OVERALL FEEL
+
+Imagine:
+
+A quiet Stockholm apartment at 4pm in December.
+
+It's already dark outside.
+
+There are candles burning.
+
+A small fir branch sits in a ceramic vase.
+
+There is a beautifully wrapped present on a wooden table.
+
+Everything is warm, natural, quiet, and beautiful.
+
+Now translate that feeling into this AI Advent page.
+
+The result should feel:
+
+MINIMAL.
+SCANDINAVIAN.
+WARM.
+CHRISTMAS.
+
+Not:
+
+"Christmas-themed website."
+
+It should feel like a beautiful Scandinavian editorial publication that happens to be celebrating Christmas.
+
+Preserve all existing functionality and responsive behavior.
