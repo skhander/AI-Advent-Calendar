@@ -27,8 +27,8 @@ Keep homepage attribution as an understated copyright credit at the bottom right
 
 **How to apply:** Preserve the hero-to-house spacing when editing the homepage; avoid using the attribution as supporting headline copy.
 
-Keep the homepage headline editorial but spacious: moderate semibold weight, normal letter spacing, cream text, and one line on desktop.
+Keep the homepage headline's current serif family, cream color, and moderate semibold weight; use only subtle letter and word spacing, and keep it on one line on desktop.
 
-**Why:** The user explicitly rejected an oversized, tightly packed display treatment and asked for elegant, highly legible proportions instead.
+**Why:** The user explicitly rejected an oversized, tightly packed display treatment, then clarified that the family must stay unchanged while size drops slightly and spacing increases only modestly.
 
 **How to apply:** Check the desktop line break and mobile wrap after headline typography changes; do not tighten tracking to force the desktop line.
