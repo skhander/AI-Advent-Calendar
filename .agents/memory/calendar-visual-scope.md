@@ -20,3 +20,9 @@ For typography, use large editorial serif for the home headline and concept name
 **Why:** The user asked for clearer contrast between these three levels and asked to remove the homepage's explanatory "Open a door" callout rather than add more instruction.
 
 **How to apply:** Keep the illustrated doors as the homepage's primary interaction; avoid reinstating a competing CTA, explainer, or redundant italic tagline beside or above the house. Keep the main content high enough to appear in the first viewport.
+
+Keep homepage attribution as an understated copyright credit at the bottom right, below the first viewport, not beneath the headline.
+
+**Why:** The user explicitly moved the attribution away from the hero and asked for the remaining homepage content to shift upward.
+
+**How to apply:** Preserve the hero-to-house spacing when editing the homepage; avoid using the attribution as supporting headline copy.
