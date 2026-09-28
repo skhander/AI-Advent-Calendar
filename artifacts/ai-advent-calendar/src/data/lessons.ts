@@ -14,15 +14,15 @@ export type Lesson = {
 export const lessons: Lesson[] = [
   {
     number: 1,
-    title: 'AI, ML & deep learning',
-    doorTitle: 'AI vs ML',
-    subtitle: 'Three nested ideas. One very common interview question.',
-    analogyTitle: 'A set of nesting dolls.',
-    analogy: 'Artificial intelligence is the outer doll: any system that does something we call intelligent. Machine learning sits inside it: systems that learn patterns from data. Deep learning is the smallest doll: ML built from multi-layer neural networks.',
-    explanation: 'AI is the broad goal of making machines perform tasks associated with intelligence, including rule-based systems. ML is a way to achieve AI by learning from examples rather than writing every rule. Deep learning is a subset of ML whose layered neural networks learn complex representations from large amounts of data. Generative AI often uses deep learning, but not all AI is generative.',
-    pmRelevance: 'The distinction stops you from overengineering. A clear decision tree may solve a problem better than an expensive model. Start with the user problem and the simplest reliable approach, not the newest technique.',
-    example: 'A support team routes tickets with hand-written keywords (rule-based AI), predicts ticket priority from past tickets (ML), and summarizes each ticket with a transformer model (deep learning).',
-    answer: '“AI is the umbrella. ML is AI that learns patterns from data, and deep learning is ML using layered neural networks. I would choose among them based on the problem, available data, accuracy needs, cost, and how explainable the result needs to be.”'
+    title: 'RAG',
+    doorTitle: 'RAG',
+    subtitle: 'How AI finds the right facts before it answers.',
+    analogyTitle: 'Giving the model a trusted cheat sheet.',
+    analogy: 'A model learns broad patterns and general knowledge from large collections of text. It was not trained on private details such as your favorite snack, today’s inventory, or the exact location of your company’s IT desk. Without that information, it may guess or repeat something unrelated that it learned elsewhere. RAG first searches sources you trust, such as company documents or a product catalog, and places the most relevant information in front of the model like a cheat sheet. The model can then answer using those facts instead of relying only on memory.',
+    explanation: 'Retrieval-augmented generation lets an AI search a trusted collection of documents, bring the best passages into its prompt, and write a response grounded in those passages.',
+    pmRelevance: 'RAG is often the first choice for private or frequently changing knowledge. Evaluate the retriever and the final answer separately. Require citations when users need to verify claims, and define what happens when nothing relevant is found.',
+    example: 'An internal benefits bot finds the current parental-leave policy, quotes the eligible section, and links the document. If the policy is missing, it says it cannot confirm rather than inventing one.',
+    answer: '“RAG retrieves relevant external information at request time and gives it to the model as context. I would use it for changing or proprietary knowledge, then measure retrieval quality, answer grounding, citations, and safe fallback behavior.”'
   },
   {
     number: 2,
@@ -74,15 +74,15 @@ export const lessons: Lesson[] = [
   },
   {
     number: 6,
-    title: 'RAG',
-    doorTitle: 'RAG',
-    subtitle: 'Give the model the right reading material before it answers.',
-    analogyTitle: 'An open-book exam.',
-    analogy: 'Instead of expecting a student to remember the latest company handbook, let them find the relevant page first and answer with the book open.',
-    explanation: 'Retrieval-augmented generation (RAG) retrieves relevant external information and adds it to the model’s prompt before generation. A typical pipeline indexes documents, retrieves likely passages for a question, then asks the model to answer grounded in those passages. It can improve freshness and traceability without changing model weights.',
-    pmRelevance: 'RAG is often the first choice for private or frequently changing knowledge. Evaluate the retriever and the final answer separately. Require citations when users need to verify claims, and define what happens when nothing relevant is found.',
-    example: 'An internal benefits bot finds the current parental-leave policy, quotes the eligible section, and links the document. If the policy is missing, it says it cannot confirm rather than inventing one.',
-    answer: '“RAG retrieves relevant external information at request time and gives it to the model as context. I would use it for changing or proprietary knowledge, then measure retrieval quality, answer grounding, citations, and safe fallback behavior.”'
+    title: 'AI, ML & deep learning',
+    doorTitle: 'AI vs ML',
+    subtitle: 'Three nested ideas. One very common interview question.',
+    analogyTitle: 'A set of nesting dolls.',
+    analogy: 'Artificial intelligence is the outer doll: any system that does something we call intelligent. Machine learning sits inside it: systems that learn patterns from data. Deep learning is the smallest doll: ML built from multi-layer neural networks.',
+    explanation: 'AI is the broad goal of making machines perform tasks associated with intelligence, including rule-based systems. ML is a way to achieve AI by learning from examples rather than writing every rule. Deep learning is a subset of ML whose layered neural networks learn complex representations from large amounts of data. Generative AI often uses deep learning, but not all AI is generative.',
+    pmRelevance: 'The distinction stops you from overengineering. A clear decision tree may solve a problem better than an expensive model. Start with the user problem and the simplest reliable approach, not the newest technique.',
+    example: 'A support team routes tickets with hand-written keywords (rule-based AI), predicts ticket priority from past tickets (ML), and summarizes each ticket with a transformer model (deep learning).',
+    answer: '“AI is the umbrella. ML is AI that learns patterns from data, and deep learning is ML using layered neural networks. I would choose among them based on the problem, available data, accuracy needs, cost, and how explainable the result needs to be.”'
   },
   {
     number: 7,
