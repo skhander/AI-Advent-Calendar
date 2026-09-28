@@ -62,8 +62,8 @@ function Reindeer() {
 function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: number) => void }) {
   const [, navigate] = useLocation();
   useEffect(() => {
-    document.title = 'the AI advent | One AI concept. Every day.';
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'One AI concept. Every day. Explore nine concepts through an interactive advent house.');
+    document.title = 'the AI advent | One AI Concept a Day.';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'One AI Concept a Day. Explore nine concepts through an interactive advent house.');
   }, []);
 
   function visit(number: number) {
@@ -80,8 +80,7 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
       </header>
       <main>
         <section className="hero" aria-labelledby="home-title">
-          <h1 id="home-title">One AI concept. Every day.</h1>
-          <p className="hero-sub">One concept at a time.</p>
+          <h1 id="home-title">One AI Concept a Day.</h1>
           <p className="hero-meta">9 days. 9 concepts.</p>
           <div className="home-progress" aria-live="polite">
             <div className="progress-track" role="progressbar" aria-label="Doors opened" aria-valuemin={0} aria-valuemax={lessons.length} aria-valuenow={opened.length}>

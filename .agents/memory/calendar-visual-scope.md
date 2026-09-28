@@ -19,4 +19,4 @@ For typography, use large editorial serif for the home headline and concept name
 
 **Why:** The user asked for clearer contrast between these three levels and asked to remove the homepage's explanatory "Open a door" callout rather than add more instruction.
 
-**How to apply:** Keep the illustrated doors as the homepage's primary interaction; avoid reinstating a competing CTA or explainer beside the house.
+**How to apply:** Keep the illustrated doors as the homepage's primary interaction; avoid reinstating a competing CTA, explainer, or redundant italic tagline beside or above the house. Keep the main content high enough to appear in the first viewport.
