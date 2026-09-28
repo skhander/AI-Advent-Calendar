@@ -227,6 +227,323 @@ function RagLesson({ openDoor }: { openDoor: (number: number) => void }) {
   );
 }
 
+function InferenceIllustration() {
+  return (
+    <svg viewBox="0 0 470 445" role="img" aria-label="Illustration of a blue Hanukkah dreidel with the Hebrew letter nun, beside gold gelt coins">
+      <defs>
+        <linearGradient id="dreidel-side" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#174b92" /><stop offset="1" stopColor="#102e61" /></linearGradient>
+        <linearGradient id="dreidel-face" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#5284cc" /><stop offset=".65" stopColor="#2861b1" /><stop offset="1" stopColor="#1b4b95" /></linearGradient>
+        <linearGradient id="gelt" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#f4d98a" /><stop offset=".55" stopColor="#d6ab53" /><stop offset="1" stopColor="#af7c2c" /></linearGradient>
+      </defs>
+      <ellipse cx="243" cy="359" rx="170" ry="23" fill="#a7b9c9" opacity=".3" />
+      <g transform="translate(0 6)">
+        <g transform="translate(105 306) rotate(-16)">
+          <ellipse cx="36" cy="36" rx="38" ry="14" fill="#a07531" />
+          <rect x="-2" y="22" width="76" height="15" fill="#c1923c" />
+          <ellipse cx="36" cy="22" rx="38" ry="14" fill="url(#gelt)" stroke="#936b30" strokeWidth="2" />
+          <ellipse cx="36" cy="22" rx="29" ry="10" fill="none" stroke="#f9e6ae" strokeWidth="1.8" />
+          <path d="m36 15 7 12H29zM36 29l-7-12h14z" fill="none" stroke="#fff0bf" strokeWidth="1.4" strokeLinejoin="round" />
+        </g>
+        <g transform="translate(296 304) rotate(14)">
+          <ellipse cx="38" cy="40" rx="46" ry="17" fill="#9a6b2a" />
+          <rect x="-8" y="23" width="92" height="18" fill="#bc8837" />
+          <ellipse cx="38" cy="23" rx="46" ry="17" fill="url(#gelt)" stroke="#936b30" strokeWidth="2" />
+          <ellipse cx="38" cy="23" rx="35" ry="12" fill="none" stroke="#f8e3a6" strokeWidth="1.8" />
+          <path d="m38 13 9 16H29zM38 33l-9-16h18z" fill="none" stroke="#fff0bf" strokeWidth="1.6" strokeLinejoin="round" />
+        </g>
+        <g transform="translate(56 330) rotate(8)">
+          <ellipse cx="39" cy="18" rx="37" ry="13" fill="url(#gelt)" stroke="#a47731" strokeWidth="2" />
+          <ellipse cx="39" cy="18" rx="28" ry="9" fill="none" stroke="#f7e0a4" strokeWidth="1.5" />
+          <path d="m39 11 7 12H32zM39 25l-7-12h14z" fill="none" stroke="#fff0bf" strokeWidth="1.2" />
+        </g>
+      </g>
+      <g transform="rotate(12 236 213)">
+        <path d="M217 53h35v72h-35z" fill="#bc914e" stroke="#173866" strokeWidth="3" />
+        <path d="M217 52c0-9 35-9 35 0" fill="#f2d38e" stroke="#173866" strokeWidth="3" />
+        <path d="M217 120h35l14 15-31 20-33-20z" fill="#e8bd73" stroke="#173866" strokeWidth="3" strokeLinejoin="round" />
+        <path d="M115 146 202 135 235 154 265 135 350 148 337 270 235 365 129 274Z" fill="#174b92" stroke="#143765" strokeWidth="5" strokeLinejoin="round" />
+        <path d="M115 146 202 135 235 154 235 365 129 274Z" fill="url(#dreidel-side)" />
+        <path d="M235 154 265 135 350 148 337 270 235 365Z" fill="#15447f" />
+        <path d="M129 159 235 174 337 159 325 263 235 344 141 265Z" fill="url(#dreidel-face)" stroke="#e7c179" strokeWidth="4" strokeLinejoin="round" />
+        <path d="M143 173 235 187 323 173" fill="none" stroke="#a9c8ec" strokeWidth="1.4" opacity=".8" />
+        <path d="M145 255 235 328 322 253" fill="none" stroke="#a9c8ec" strokeWidth="1.4" opacity=".7" />
+        <path d="M235 175v153" stroke="#bdd2ef" strokeWidth="1" opacity=".4" />
+        <text x="235" y="270" textAnchor="middle" fill="#f6e5b7" fontFamily="Georgia, serif" fontSize="91" fontWeight="bold">נ</text>
+        <path d="M126 152 202 142M269 143l68 10" stroke="#f5d68e" strokeWidth="3" strokeLinecap="round" />
+      </g>
+      <path d="m85 116 4 11 11 4-11 4-4 11-4-11-11-4 11-4zM380 92l3 8 8 3-8 3-3 8-3-8-8-3 8-3zM390 231l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#bb8e45" />
+      <circle cx="117" cy="75" r="2.5" fill="#b78b49" /><circle cx="374" cy="171" r="2.5" fill="#b78b49" />
+    </svg>
+  );
+}
+
+function InferenceLesson({ openDoor }: { openDoor: (number: number) => void }) {
+  const next = lessons.find(item => item.number === 3);
+  return (
+    <div className="lesson-site inference-site lesson-page-enter">
+      <header className="lesson-header">
+        <Brand />
+        <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> Back to the house</Link>
+      </header>
+      <main className="lesson-main inference-main" data-testid="content-lesson-2">
+        <div className="lesson-topline"><span>The AI advent / Door 2</span><span>2 of nine doors</span></div>
+        <section className="inference-hero" aria-labelledby="inference-title">
+          <div className="inference-hero-copy">
+            <span className="hero-index">A new idea to spin around</span>
+            <h1 id="inference-title">Inference</h1>
+            <p className="inference-subtitle">What happens when a trained model meets your question.</p>
+          </div>
+          <figure className="inference-art">
+            <InferenceIllustration />
+            <figcaption className="art-caption">Dreidel &amp; gelt / Door 2</figcaption>
+          </figure>
+        </section>
+
+        <section className="inference-intro" aria-label="Inference in plain English">
+          <div className="inference-intro-copy">
+            <span className="section-kicker">in plain English</span>
+            <p>Inference is the act of running a trained model on new input to produce a prediction, generate text, classify something, or choose the next action.</p>
+          </div>
+          <figure className="inference-diagram">
+            <figcaption>trained patterns at work</figcaption>
+            <div className="inference-diagram-grid">
+              <div className="inference-card">
+                <span className="inference-card-label">INPUT</span>
+                <strong>“Rain is in the forecast…”</strong>
+              </div>
+              <div className="inference-model"><span><ArrowRight size={21} strokeWidth={1.7} /></span>model</div>
+              <div className="inference-card output">
+                <span className="inference-card-label">PREDICTION</span>
+                <strong>bring an umbrella</strong>
+                <small>confidence 0.91</small>
+              </div>
+            </div>
+          </figure>
+        </section>
+
+        <section className="inference-section" aria-labelledby="inference-how-heading">
+          <div className="inference-section-heading"><span className="section-kicker">1 / under the hood</span><h2 id="inference-how-heading">How it works</h2></div>
+          <ol className="inference-steps">
+            <li><span>1</span><p>Receive the input, such as a prompt, image, or sensor reading.</p></li>
+            <li><span>2</span><p>Pass it through the learned patterns inside the model.</p></li>
+            <li><span>3</span><p>Return an output, such as text, a label, a forecast, or a score.</p></li>
+          </ol>
+        </section>
+
+        <section className="inference-section inference-uses" aria-labelledby="inference-uses-heading">
+          <div className="inference-section-heading"><span className="section-kicker">2 / outside the lab</span><h2 id="inference-uses-heading">Real-world use</h2></div>
+          <div className="inference-use-list">
+            <article><span className="inference-use-mark" aria-hidden="true">✦</span><h3>Autocomplete</h3><p>Predict the next phrase while you write an email or code.</p></article>
+            <article><span className="inference-use-mark" aria-hidden="true">✦</span><h3>Fraud detection</h3><p>Score a transaction against patterns learned from past activity.</p></article>
+            <article><span className="inference-use-mark" aria-hidden="true">✦</span><h3>Vision systems</h3><p>Identify objects or defects on a factory line in real time.</p></article>
+          </div>
+        </section>
+
+        <section className="inference-picture" aria-labelledby="inference-picture-heading">
+          <span className="section-kicker">3 / picture it</span>
+          <h2 id="inference-picture-heading">Think of it like this: <em>Using what the model learned</em></h2>
+          <p>Training is when a model learns patterns from many examples. Inference is what happens later, when you give that trained model something new. If you type the beginning of a sentence, the model uses its learned patterns to predict what should come next. The model is not learning from scratch each time; it is applying what it already learned to the input in front of it.</p>
+        </section>
+        <nav className="lesson-footer" aria-label="Lesson navigation">
+          <Link href="/" className="back-link" data-testid="link-back-home-bottom"><ArrowLeft size={16} /> Back to the house</Link>
+          {next && <Link href={`/lesson/${next.number}`} className="next-link" onClick={() => { openDoor(next.number); window.scrollTo(0, 0); }} data-testid={`link-next-lesson-${next.number}`}><small>Open the next door →</small><span>{next.title}</span></Link>}
+        </nav>
+      </main>
+    </div>
+  );
+}
+
+function KinaraIllustration() {
+  return (
+    <div className="emb-kinara" role="img" aria-label="Kinara with seven candles: three red on the left, one black in the center, and three green on the right">
+      <div className="emb-kinara-glow" aria-hidden="true" />
+      <div className="emb-candles" aria-hidden="true">
+        {['red', 'red', 'red', 'black', 'green', 'green', 'green'].map((color, index) => (
+          <div className={`emb-candle emb-candle-${color}`} key={index}>
+            <span className="emb-flame" /><span className="emb-wick" /><span className="emb-candle-body" /><span className="emb-holder" />
+          </div>
+        ))}
+      </div>
+      <div className="emb-kinara-base" aria-hidden="true"><span /></div>
+      <div className="emb-mat" aria-hidden="true" />
+    </div>
+  );
+}
+
+function EmbeddingsLesson({ openDoor }: { openDoor: (number: number) => void }) {
+  const next = lessons.find(item => item.number === 4);
+  return (
+    <div className="lesson-site embeddings-site lesson-page-enter">
+      <header className="lesson-header">
+        <Brand />
+        <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> Back to the house</Link>
+      </header>
+      <main className="lesson-main embeddings-main" data-testid="content-lesson-3">
+        <div className="lesson-topline"><span>The AI advent / Door 3</span><span>3 of nine doors</span></div>
+        <section className="emb-hero" aria-labelledby="embeddings-title">
+          <div className="emb-hero-copy">
+            <span className="emb-eyebrow"><span className="emb-eyebrow-line" /> A lesson in finding connection</span>
+            <h1 id="embeddings-title">Embeddings<span>.</span></h1>
+            <p>How words become points on a map of meaning.</p>
+            <div className="emb-hero-foot"><span>DOOR 3 / 9</span><span>THE AI ADVENT</span></div>
+          </div>
+          <div className="emb-hero-art">
+            <KinaraIllustration />
+            <span className="emb-art-label">Seven lights. One shared space.</span>
+          </div>
+        </section>
+
+        <section className="emb-intro" aria-label="Embeddings in plain English">
+          <div className="emb-intro-copy">
+            <span className="section-kicker">in plain English</span>
+            <p>An embedding turns text, images, or other data into a list of numbers that captures relationships and meaning. Similar items land near each other in that mathematical space.</p>
+          </div>
+          <div className="emb-intro-aside" aria-hidden="true"><span>words</span><span className="emb-arrow">→</span><span>coordinates</span><span className="emb-arrow">→</span><span>connections</span></div>
+        </section>
+
+        <figure className="emb-map-figure">
+          <div className="emb-map-heading">
+            <div><span className="section-kicker">A visual guide / not a computation</span><h2>meaning becomes a location</h2></div>
+            <span className="emb-map-symbol" aria-hidden="true">✳</span>
+          </div>
+          <div className="emb-map" role="img" aria-label="Illustrative similarity map, not computed embeddings: refund, return money, return, and send back are close together; pizza and food form another group; sunset and evening form a third group.">
+            <div className="emb-map-axis emb-map-axis-y" aria-hidden="true">meaning axis</div>
+            <div className="emb-map-axis emb-map-axis-x" aria-hidden="true">meaning axis <span>→</span></div>
+            <div className="emb-cluster emb-cluster-returns" aria-hidden="true">
+              <span className="emb-point emb-point-primary">refund</span>
+              <span className="emb-point">return money</span>
+              <span className="emb-point">return</span>
+              <span className="emb-point">send back</span>
+            </div>
+            <div className="emb-cluster emb-cluster-food" aria-hidden="true">
+              <span className="emb-point emb-point-primary">pizza</span>
+              <span className="emb-point">food</span>
+            </div>
+            <div className="emb-cluster emb-cluster-evening" aria-hidden="true">
+              <span className="emb-point emb-point-primary">sunset</span>
+              <span className="emb-point">evening</span>
+            </div>
+          </div>
+          <figcaption className="emb-map-caption"><span className="emb-caption-key" aria-hidden="true"><i /><i /></span><strong>close in meaning</strong><span>Nearness is illustrative, not a measured result.</span></figcaption>
+        </figure>
+
+        <section className="emb-section" aria-labelledby="emb-how-heading">
+          <div className="emb-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="emb-how-heading">How it<br /><em>works</em></h2></div>
+          <ol className="emb-steps">
+            <li><span>1</span><p>Convert each item into a numeric vector.</p></li>
+            <li><span>2</span><p>Place vectors in a shared space where distance represents similarity.</p></li>
+            <li><span>3</span><p>Compare distances to find related items or patterns.</p></li>
+          </ol>
+        </section>
+
+        <section className="emb-section emb-uses" aria-labelledby="emb-uses-heading">
+          <div className="emb-section-title"><span className="section-kicker">2 / outside the lab</span><h2 id="emb-uses-heading">Real-world<br /><em>use</em></h2></div>
+          <div className="emb-use-list">
+            <article><span className="emb-use-index">1</span><div><h3>Recommendation engines</h3><p>Suggest articles, products, or songs related to what someone liked.</p></div></article>
+            <article><span className="emb-use-index">2</span><div><h3>Duplicate detection</h3><p>Spot support tickets or documents that say the same thing differently.</p></div></article>
+            <article><span className="emb-use-index">3</span><div><h3>Memory for AI apps</h3><p>Store past conversations so an assistant can recall related moments.</p></div></article>
+          </div>
+        </section>
+
+        <section className="emb-picture" aria-labelledby="emb-picture-heading">
+          <div className="emb-picture-label"><span className="section-kicker">3 / picture it</span><span className="emb-picture-ornament" aria-hidden="true">◆ ━ ◆ ━ ◆</span></div>
+          <h2 id="emb-picture-heading">Think of it like this: <em>A map organized by meaning</em></h2>
+          <p>Imagine placing every sentence on a giant map. Sentences about refunds would appear near sentences about returning a purchase, even when they use different words. A sentence about making pizza would be much farther away. An embedding gives each item numeric coordinates on this meaning map, making it possible for software to compare how closely related two items are.</p>
+        </section>
+        <nav className="lesson-footer" aria-label="Lesson navigation">
+          <Link href="/" className="back-link" data-testid="link-back-home-bottom"><ArrowLeft size={16} /> Back to the house</Link>
+          {next && <Link href={`/lesson/${next.number}`} className="next-link" onClick={() => { openDoor(next.number); window.scrollTo(0, 0); }} data-testid={`link-next-lesson-${next.number}`}><small>Open the next door →</small><span>{next.title}</span></Link>}
+        </nav>
+      </main>
+    </div>
+  );
+}
+
+function ContextWindowLesson({ openDoor }: { openDoor: (number: number) => void }) {
+  const next = lessons.find(item => item.number === 5);
+  return (
+    <div className="lesson-site context-site lesson-page-enter">
+      <header className="lesson-header">
+        <Brand />
+        <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> Back to the house</Link>
+      </header>
+      <main className="lesson-main context-main" data-testid="content-lesson-4">
+        <div className="lesson-topline"><span>The AI advent / Door 4</span><span>4 of nine doors</span></div>
+        <section className="context-hero" aria-labelledby="context-title">
+          <div className="context-hero-copy">
+            <span className="context-overline">An invitation to understand</span>
+            <h1 id="context-title">Context<br /><em>Window</em><span className="context-period">.</span></h1>
+            <p>The amount of conversation an AI can hold at once.</p>
+            <span className="context-hero-rule" aria-hidden="true" />
+            <span className="context-hero-index">LESSON FOUR <span>/</span> NINE</span>
+          </div>
+          <div className="context-hero-art" aria-hidden="true">
+            <div className="context-art-arch">
+              <span className="context-art-moon" />
+              <span className="context-art-orbit" />
+              <span className="context-art-lantern"><i /><b /><i /></span>
+              <span className="context-art-line line-one" />
+              <span className="context-art-line line-two" />
+              <span className="context-art-line line-three" />
+            </div>
+            <span className="context-art-caption">A little room for what matters.</span>
+          </div>
+        </section>
+
+        <section className="context-intro" aria-label="Context Window in plain English">
+          <span className="section-kicker">in plain English</span>
+          <p>A context window is the maximum amount of text a model can consider in one request: your prompt, earlier messages, instructions, retrieved documents, and its response.</p>
+        </section>
+
+        <figure className="context-visual">
+          <div className="context-visual-heading">
+            <span className="section-kicker">A visual guide / illustrative example</span>
+            <h2>the model can only see <em>inside the frame</em></h2>
+          </div>
+          <div className="context-frame" role="img" aria-label="Illustrative context window showing three conversation messages in view: Can you compare these two plans? Here are the key differences… And what about cost? The example shows 2,048 tokens available, not a dynamic model limit.">
+            <div className="context-frame-top"><span>context window</span><span>in view right now</span></div>
+            <div className="context-frame-body">
+              <div className="context-message context-message-user"><small>YOU</small><span>Can you compare these two plans?</span></div>
+              <div className="context-message context-message-ai"><small>ASSISTANT</small><span>Here are the key differences…</span></div>
+              <div className="context-message context-message-user"><small>YOU</small><span>And what about cost?</span></div>
+            </div>
+            <div className="context-frame-foot"><span className="context-token-dot" /><strong>2,048</strong><span>tokens available</span></div>
+          </div>
+          <figcaption>Illustrative example, not a live model limit.</figcaption>
+        </figure>
+
+        <section className="context-section" aria-labelledby="context-how-heading">
+          <div className="context-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="context-how-heading">How it <em>works</em></h2></div>
+          <ol className="context-steps">
+            <li><span>1</span><p>Collect the messages, instructions, and documents needed for the task.</p></li>
+            <li><span>2</span><p>Fit them into the model’s token limit, often by trimming or summarizing.</p></li>
+            <li><span>3</span><p>Generate the response while those inputs are still in view.</p></li>
+          </ol>
+        </section>
+
+        <section className="context-section context-uses" aria-labelledby="context-uses-heading">
+          <div className="context-section-title"><span className="section-kicker">2 / outside the lab</span><h2 id="context-uses-heading">Real-world <em>use</em></h2></div>
+          <div className="context-use-list">
+            <article><span className="context-use-marker" aria-hidden="true" /><div><h3>Long-document review</h3><p>Compare clauses across a contract, policy, or technical manual.</p></div></article>
+            <article><span className="context-use-marker" aria-hidden="true" /><div><h3>Multi-turn assistants</h3><p>Keep a conversation coherent as a user asks follow-up questions.</p></div></article>
+            <article><span className="context-use-marker" aria-hidden="true" /><div><h3>Codebase help</h3><p>Give an assistant enough related files to understand a bug.</p></div></article>
+          </div>
+        </section>
+
+        <section className="context-picture" aria-labelledby="context-picture-heading">
+          <div className="context-picture-top"><span className="section-kicker">3 / picture it</span><span className="context-picture-mark" aria-hidden="true">◇</span></div>
+          <h2 id="context-picture-heading">Think of it like this: <em>The model’s working space</em></h2>
+          <p>Think of the context window as the information currently spread across a desk. The model can work with anything on that desk: your latest message, earlier conversation, instructions, and retrieved documents. But the desk has a size limit. When too much information is added, older or less important material may need to be removed or summarized before the model can continue.</p>
+        </section>
+        <nav className="lesson-footer" aria-label="Lesson navigation">
+          <Link href="/" className="back-link" data-testid="link-back-home-bottom"><ArrowLeft size={16} /> Back to the house</Link>
+          {next && <Link href={`/lesson/${next.number}`} className="next-link" onClick={() => { openDoor(next.number); window.scrollTo(0, 0); }} data-testid={`link-next-lesson-${next.number}`}><small>Open the next door →</small><span>{next.title}</span></Link>}
+        </nav>
+      </main>
+    </div>
+  );
+}
+
 function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
   const params = useParams<{ number: string }>();
   const number = Number(params.number);
@@ -241,6 +558,9 @@ function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
 
   if (!lesson) return <NotFound />;
   if (number === 1) return <RagLesson openDoor={openDoor} />;
+  if (number === 2) return <InferenceLesson openDoor={openDoor} />;
+  if (number === 3) return <EmbeddingsLesson openDoor={openDoor} />;
+  if (number === 4) return <ContextWindowLesson openDoor={openDoor} />;
   const next = lessons[number] ?? null;
 
   return (

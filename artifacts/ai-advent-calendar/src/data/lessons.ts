@@ -26,6 +26,42 @@ export const lessons: Lesson[] = [
   },
   {
     number: 2,
+    title: 'Inference',
+    doorTitle: 'Inference',
+    subtitle: 'What happens when a trained model meets your question.',
+    analogyTitle: 'Using what the model learned',
+    analogy: 'Training is when a model learns patterns from many examples. Inference is what happens later, when you give that trained model something new. If you type the beginning of a sentence, the model uses its learned patterns to predict what should come next. The model is not learning from scratch each time; it is applying what it already learned to the input in front of it.',
+    explanation: 'Inference is the act of running a trained model on new input to produce a prediction, generate text, classify something, or choose the next action.',
+    pmRelevance: 'Inference is the moment a user experiences an AI product. Evaluate the usefulness, response time, reliability, and cost of each model run.',
+    example: 'A weather-aware assistant reads “Rain is in the forecast…” and predicts “bring an umbrella” with a confidence score of 0.91.',
+    answer: '“Inference applies a trained model to new input to produce an output. I would measure both the quality of that output and the speed and cost of producing it.”'
+  },
+  {
+    number: 3,
+    title: 'Embeddings',
+    doorTitle: 'Embeddings',
+    subtitle: 'How words become points on a map of meaning.',
+    analogyTitle: 'A map organized by meaning',
+    analogy: 'Imagine placing every sentence on a giant map. Sentences about refunds would appear near sentences about returning a purchase, even when they use different words. A sentence about making pizza would be much farther away. An embedding gives each item numeric coordinates on this meaning map, making it possible for software to compare how closely related two items are.',
+    explanation: 'An embedding turns text, images, or other data into a list of numbers that captures relationships and meaning. Similar items land near each other in that mathematical space.',
+    pmRelevance: 'Embeddings make similarity search and recommendations possible. Evaluate what close matches mean for the product and check whether the results are actually relevant to users.',
+    example: 'A support tool finds that “refund” and “return money” are closely related even though they use different words.',
+    answer: '“Embeddings represent items as numeric vectors so software can compare their similarity. I would use them to retrieve related content and test whether nearby results are useful, not just mathematically close.”'
+  },
+  {
+    number: 4,
+    title: 'Context Window',
+    doorTitle: 'Context Window',
+    subtitle: 'The amount of conversation an AI can hold at once.',
+    analogyTitle: 'The model’s working space',
+    analogy: 'Think of the context window as the information currently spread across a desk. The model can work with anything on that desk: your latest message, earlier conversation, instructions, and retrieved documents. But the desk has a size limit. When too much information is added, older or less important material may need to be removed or summarized before the model can continue.',
+    explanation: 'A context window is the maximum amount of text a model can consider in one request: your prompt, earlier messages, instructions, retrieved documents, and its response.',
+    pmRelevance: 'Plan which instructions, history, and documents belong in a request. Test behavior at the token limit, and decide when to trim or summarize older context.',
+    example: 'A contract assistant keeps the user’s question and relevant clauses in view, then summarizes older conversation so the request fits within the model’s token limit.',
+    answer: '“The context window is the token budget for everything a model can consider in one request. I would prioritize relevant information, account for the response, and test what happens when the conversation grows.”'
+  },
+  {
+    number: 5,
     title: 'LLMs & tokens',
     doorTitle: 'LLMs & tokens',
     subtitle: 'How a language model reads, writes, and charges by the piece.',
@@ -35,42 +71,6 @@ export const lessons: Lesson[] = [
     pmRelevance: 'Tokens affect latency, context limits, and price. Longer prompts and longer outputs usually cost more. A PM should set response-length expectations and measure both quality and cost per successful task.',
     example: 'A customer-support assistant receives a 1,200-token conversation and returns a 180-token draft. Both input and output tokens count toward usage, and a concise draft is faster and cheaper to review.',
     answer: '“An LLM predicts the next token using the context it has been given. Tokens are chunks of text, and their count drives context usage, latency, and cost. I would optimize for task success per dollar, not just model fluency.”'
-  },
-  {
-    number: 3,
-    title: 'Training vs inference',
-    doorTitle: 'Training / inference',
-    subtitle: 'The difference between learning a skill and putting it to work.',
-    analogyTitle: 'Studying versus taking the test.',
-    analogy: 'Training is the long period of practice where a chef learns from thousands of recipes and feedback. Inference is making tonight’s dinner using what they have already learned.',
-    explanation: 'During training, a model sees examples and its parameters are adjusted to reduce errors. Inference happens after training: the model uses fixed learned parameters to respond to a new input. A normal chat does not retrain the underlying model. Supplying information in a prompt changes its immediate context, not its weights.',
-    pmRelevance: 'Training and inference have different costs and timelines. Most product teams build on an existing model and spend their effort improving the inference experience through prompts, retrieval, UX, and evaluation.',
-    example: 'A company uses a pre-trained LLM to summarize meeting notes. Each new summary is an inference call; the model does not permanently learn the company’s meeting style from that call.',
-    answer: '“Training updates a model’s parameters using data; inference uses those learned parameters to produce an output for a new input. For most product features, I would start with inference on an existing model before considering any additional training.”'
-  },
-  {
-    number: 4,
-    title: 'Prompts & context windows',
-    doorTitle: 'Prompts / context',
-    subtitle: 'What the model can see shapes what it can say.',
-    analogyTitle: 'A desk with limited space.',
-    analogy: 'A prompt is the brief you hand to a collaborator. The context window is the size of their desk: instructions, documents, chat history, and the answer all need to fit on it.',
-    explanation: 'A prompt contains instructions and information supplied at inference time. The context window is the maximum number of tokens the model can consider in a request, including input and often the generated output. Long context does not guarantee good attention to every detail; irrelevant material can bury important instructions.',
-    pmRelevance: 'Design what goes into the window. Prioritize relevant evidence, clear task instructions, and useful examples. Plan for truncation, growing chat histories, privacy-sensitive information, and rising token cost.',
-    example: 'A contract assistant receives the user’s question, the relevant clause, and a direction to cite the clause. Sending the entire archive instead would add cost and make the right passage harder to find.',
-    answer: '“The prompt is the task and context we provide; the context window is the token budget available to the model. I would keep instructions precise, retrieve only relevant information, and test what happens when conversations get long.”'
-  },
-  {
-    number: 5,
-    title: 'Embeddings & vector search',
-    doorTitle: 'Vector search',
-    subtitle: 'Finding related meaning even when the words differ.',
-    analogyTitle: 'A map of ideas.',
-    analogy: 'Picture every sentence pinned onto a map. Ideas with similar meanings land near each other, even if they use different words. An embedding gives each idea its coordinates.',
-    explanation: 'An embedding is a numeric vector representing content in a learned semantic space. Vector search compares vectors using a similarity measure and retrieves nearby items. It is useful for semantic search, recommendations, clustering, and finding source material for RAG. Similarity suggests relevance; it does not prove truth.',
-    pmRelevance: 'Semantic search can help users find “how to change my plan” when the help article says “subscription modifications.” Quality depends on chunking, metadata, freshness, permissions, and testing real queries.',
-    example: 'A help center indexes article chunks as embeddings. A query for “my card was charged twice” retrieves an article titled “Resolving duplicate payments,” despite the wording mismatch.',
-    answer: '“Embeddings turn content into vectors so we can retrieve items close in meaning, not just exact keywords. I would evaluate retrieval relevance and access controls because a nearby result is not automatically the right one.”'
   },
   {
     number: 6,
