@@ -311,7 +311,7 @@ function EmbeddingsLesson({ openDoor }: { openDoor: (number: number) => void }) 
           </div>
           <figure className="emb-map-figure">
           <div className="emb-map-heading">
-            <div><span className="section-kicker">A visual guide / not a computation</span><h2>meaning becomes a location</h2></div>
+            <div><span className="section-kicker">A visual guide</span><h2>meaning becomes a location</h2></div>
           </div>
           <div className="emb-map" role="img" aria-label="Illustrative similarity map, not computed embeddings: refund, return money, return, and send back are close together; pizza and food form another group; sunset and evening form a third group.">
             <div className="emb-map-axis emb-map-axis-y" aria-hidden="true">meaning axis</div>
@@ -399,7 +399,7 @@ function TokensLesson({ openDoor }: { openDoor: (number: number) => void }) {
             <p>Tokens are the small chunks of text a model reads and writes. A token might be a whole word, part of a word, a space, or punctuation, depending on the tokenizer.</p>
           </div>
           <figure className="tokens-figure">
-          <div className="tokens-figure-heading"><div><span className="section-kicker">A visual guide / illustrative example</span><h2>language, cut into reusable pieces</h2></div></div>
+          <div className="tokens-figure-heading"><div><span className="section-kicker">A visual guide</span><h2>language, cut into reusable pieces</h2></div></div>
           <div className="tokens-figure-body">
             <div className="tokens-ruler" aria-label="Illustrative scale with marks at 0, 5, 10, and 15"><span>0</span><span>5</span><span>10</span><span>15</span></div>
             <div className="tokens-original"><span>ORIGINAL TEXT</span><strong>Unforgettable!</strong></div>
@@ -472,7 +472,7 @@ function ContextWindowLesson({ openDoor }: { openDoor: (number: number) => void 
           <p>A context window is the maximum amount of text a model can consider in one request: your prompt, earlier messages, instructions, retrieved documents, and its response.</p></div>
           <figure className="context-visual">
           <div className="context-visual-heading">
-            <span className="section-kicker">A visual guide / illustrative example</span>
+            <span className="section-kicker">A visual guide</span>
             <h2>the model can only see <em>inside the frame</em></h2>
           </div>
           <div className="context-frame" role="img" aria-label="Illustrative context window showing three conversation messages in view: Can you compare these two plans? Here are the key differences… And what about cost? The example shows 2,048 tokens available, not a dynamic model limit.">
@@ -546,7 +546,7 @@ function SemanticSearchLesson({ openDoor }: { openDoor: (number: number) => void
             <p>Semantic search compares the meaning and intent of a query with the meaning of indexed content, so related language can match even when the exact keywords are different.</p>
           </div>
           <figure className="semantic-visual">
-          <div className="semantic-visual-heading"><div><span className="section-kicker">A visual guide / illustrative example</span><h2>the words can change; <em>the intent stays</em></h2></div></div>
+          <div className="semantic-visual-heading"><div><span className="section-kicker">A visual guide</span><h2>the words can change; <em>the intent stays</em></h2></div></div>
           <div className="semantic-visual-body">
             <div className="semantic-query"><span>THE QUERY</span><strong>“quiet place to work”</strong><small>What you mean, not only what you type.</small></div>
             <div className="semantic-meaning" aria-hidden="true"><span>meaning</span><i /></div>
@@ -618,7 +618,7 @@ function McpLesson({ openDoor }: { openDoor: (number: number) => void }) {
             <p>The Model Context Protocol is a common set of rules for exposing tools, resources, and prompts to AI applications, so each connection does not need a custom one-off design.</p>
           </div>
           <figure className="mcp-diagram" aria-label="Illustrative diagram: an AI client connects through MCP shared rules to a calendar, files, and a database">
-          <div className="mcp-diagram-head"><div><span className="section-kicker">a visual guide / not a live connection</span><h2>one protocol, many connections</h2></div><span>Fig. 7 / connection</span></div>
+          <div className="mcp-diagram-head"><div><span className="section-kicker">A visual guide</span><h2>one protocol, many connections</h2></div><span>Fig. 7 / connection</span></div>
           <div className="mcp-diagram-flow">
             <div className="mcp-diagram-node"><small>application</small><strong>AI client</strong></div>
             <span className="mcp-diagram-arrow" aria-hidden="true" />
@@ -688,7 +688,7 @@ function ModelsLesson({ openDoor }: { openDoor: (number: number) => void }) {
           </div>
           <figure className="models-comparison">
           <div className="models-comparison-heading">
-            <div><span className="section-kicker">a visual guide / not a selector</span><h2>choose the right engine</h2></div>
+            <div><span className="section-kicker">A visual guide</span><h2>choose the right engine</h2></div>
             <span className="models-comparison-index" aria-hidden="true">01 — 03</span>
           </div>
           <div className="models-engine-list" role="img" aria-label="Illustrative comparison: small models are fast and low cost, balanced models offer quality and speed, and large models are deep but slower. Quick replies may suit smaller models, while complex reasoning may suit larger models.">
@@ -775,7 +775,7 @@ function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
             <p>{lesson.explanation}</p>
           </div>
           <figure className="eval-diagram" aria-label="Evaluation compares model answers against test examples, checks whether claims are supported by evidence, then applies layered safeguards including input checks, citations, validation, and human review.">
-            <figcaption><span className="section-kicker">A visual guide / quality and safety</span><strong>Trust is a process.</strong></figcaption>
+            <figcaption><span className="section-kicker">A visual guide</span><strong>Trust is a process.</strong></figcaption>
             <div className="eval-flow">
               <div className="eval-node"><small>01 / EVALUATE</small><strong>Test examples</strong><span>Compare answers to expected behavior</span></div>
               <div className="eval-connector" aria-hidden="true">↓</div>
