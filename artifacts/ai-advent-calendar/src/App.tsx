@@ -81,6 +81,7 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
       <main>
         <section className="hero" aria-labelledby="home-title">
           <h1 id="home-title">Learn one AI concept a day</h1>
+          <p className="hero-watermark">Sharin Khander</p>
           <p className="hero-meta">9 days. 9 concepts.</p>
           <div className="home-progress" aria-live="polite">
             <div className="progress-track" role="progressbar" aria-label="Doors opened" aria-valuemin={0} aria-valuemax={lessons.length} aria-valuenow={opened.length}>
