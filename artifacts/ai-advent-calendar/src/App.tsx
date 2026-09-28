@@ -61,6 +61,7 @@ function Reindeer() {
 
 function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: number) => void }) {
   const [, navigate] = useLocation();
+  const nextDoor = lessons.find(lesson => !opened.includes(lesson.number))?.number ?? 1;
   useEffect(() => {
     document.title = 'the AI advent | Learn one AI concept a day.';
     document.querySelector('meta[name="description"]')?.setAttribute('content', 'Learn one AI concept a day. 9 days. 9 concepts. Open a door.');
@@ -82,10 +83,15 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
         <section className="hero" aria-labelledby="home-title">
           <h1 id="home-title">Learn one AI concept a day.</h1>
           <p className="hero-sub">9 days. 9 concepts.</p>
-          <a className="hero-door-link" href="#doors" data-testid="link-open-a-door">Open a door →</a>
-          <div className="progress-line" aria-live="polite" aria-label={`${opened.length} of 9 doors opened`} data-testid="status-progress">{opened.length} / 9</div>
+          <div className="home-progress" aria-live="polite">
+            <div className="progress-track" role="progressbar" aria-label="Doors opened" aria-valuemin={0} aria-valuemax={lessons.length} aria-valuenow={opened.length}>
+              <span className="progress-fill" style={{ width: `${(opened.length / lessons.length) * 100}%` }} />
+            </div>
+            <span className="progress-line" data-testid="status-progress">{opened.length} / {lessons.length}</span>
+          </div>
         </section>
 
+        <div className="house-stage">
         <div className="scene" id="doors" aria-label="Illustrated advent house with nine interactive doors">
           <div className="moon" aria-hidden="true" />
           <span className="star s1" aria-hidden="true">✦</span><span className="star s2" aria-hidden="true">✦</span><span className="star s3" aria-hidden="true">✦</span>
@@ -122,6 +128,13 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
             </div>
             <div className="house-plinth" aria-hidden="true" />
           </div>
+        </div>
+        <aside className="house-callout">
+          <button type="button" className="hero-door-link" onClick={() => visit(nextDoor)} data-testid="link-open-a-door">
+            Open a door <ArrowRight size={15} aria-hidden="true" />
+          </button>
+          <p>Each one starts with a clear explanation and a visual guide.</p>
+        </aside>
         </div>
       </main>
     </div>

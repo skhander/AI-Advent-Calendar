@@ -230,6 +230,14 @@ a { color: inherit; }
 .hero-door-link { display: inline-block; color: #f4d195; font: 700 12px var(--app-font-mono); letter-spacing: .06em; text-decoration: none; border-bottom: 1px solid #e7bf80; padding: 0 0 6px; margin-top: 16px; }
 .hero-door-link:hover { color: #fff0cc; }
 .progress-line { margin: 15px auto 0; color: #ebd7b2; font: 700 12px var(--app-font-mono); letter-spacing: .08em; }
+.home-progress { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 18px auto 0; }
+.progress-track { width: min(230px, 56vw); height: 8px; border: 1px solid #d8be8d; border-radius: 999px; overflow: hidden; background: #102e2a; }
+.progress-fill { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #d88c60, #f1d191); transition: width .35s ease; }
+.home-progress .progress-line { margin: 0; min-width: 46px; text-align: left; }
+.house-stage { position: relative; width: min(1150px, 100%); margin: 0 auto; }
+.house-callout { position: absolute; left: 1%; top: 22px; z-index: 8; width: 240px; padding: 18px 20px; border-left: 1px solid #e7bf80; background: linear-gradient(90deg, #173a34f5, #173a34d4); }
+.house-callout .hero-door-link { display: inline-flex; align-items: center; gap: 8px; margin: 0; border: 0; border-bottom: 1px solid #e7bf80; background: transparent; cursor: pointer; text-transform: uppercase; }
+.house-callout p { margin: 14px 0 0; color: #e5dcc9; font: 400 16px/1.45 var(--app-font-serif); }
 
 .scene { width: min(1150px, 98%); height: 615px; position: relative; z-index: 2; margin: 0 auto; scroll-margin-top: 12px; }
 .moon { position: absolute; right: 9%; top: 38px; width: 55px; height: 55px; background: #f2dca9; border-radius: 50%; opacity: .76; box-shadow: 0 0 40px 16px #ecd59a31; }
@@ -374,6 +382,7 @@ a { color: inherit; }
 .rag-picture p { position: relative; z-index: 1; max-width: 790px; font-size: 16px; line-height: 1.85; color: #fff1dd; margin: 0; }
 .rag-main .lesson-footer { margin-top: 71px; }
 @media (max-width: 750px) {
+  .house-callout { position: relative; left: auto; top: auto; width: auto; max-width: 360px; margin: -5px auto 35px; }
  .home-header { height: 65px; padding: 0 22px; }
  .hero { padding-top: 21px; }.hero h1 { font-size: clamp(42px, 8vw, 60px); }.hero-sub { margin: auto; }
   .scene { width: 100%; height: 490px; margin-top: 0; }.house { width: min(600px, 94%); height: 370px; bottom: 48px; }.roof { height: 132px; }.house-body { inset: 82px 13px 0; border-width: 6px; }.attic { top: 40px; width: 88px; height: 80px; }.attic-window { top: 58px; width: 39px; height: 39px; border-width: 5px; }.facade { inset: 117px 31px 19px; column-gap: 6%; row-gap: 9px; }.door-wrap { max-width: 112px; }.door-frame { border-radius: 30px 30px 3px 3px; }.door { border-radius: 28px 28px 2px 2px; }.door::before { border-radius: 23px 23px 2px 2px; inset: 6px; }.door::after { right: 5px; }.door span { font-size: clamp(24px, 6vw, 34px); }.door-topic { font-size: clamp(9px, 2.3vw, 13px); }.garland { top: 112px; }.garland::after { letter-spacing: 5px; font-size: 19px; }.chimney { transform: scale(.7); transform-origin: bottom; }.tree.left { left: -90px; }.tree.right { right: -90px; }.moon { right: 6%; top: 10px; width: 38px; height: 38px; }.ground { height: 120px; }.scene-reindeer { width: 86px; height: 82px; left: 0; bottom: 30px; }
