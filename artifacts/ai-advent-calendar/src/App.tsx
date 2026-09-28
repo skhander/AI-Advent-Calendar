@@ -1,5 +1,5 @@
 import { useEffect, type CSSProperties } from 'react';
-import { ArrowLeft, ArrowRight, Asterisk, Snowflake } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Asterisk } from 'lucide-react';
 import { Link, Route, Switch, Router as WouterRouter, useLocation, useParams } from 'wouter';
 import { lessons } from './data/lessons';
 import { useAdventProgress } from './hooks/use-advent-progress';
@@ -62,8 +62,8 @@ function Reindeer() {
 function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: number) => void }) {
   const [, navigate] = useLocation();
   useEffect(() => {
-    document.title = 'AI Advent Calendar | Nine AI concepts. One better interview.';
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Open nine doors in a snowy advent house and learn the AI fundamentals you need for your next product manager interview.');
+    document.title = 'the AI advent | Learn one AI concept a day.';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Learn one AI concept a day. 9 days. 9 concepts. Open a door.');
   }, []);
 
   function visit(number: number) {
@@ -77,20 +77,16 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
       <Snow />
       <header className="home-header">
         <Brand />
-        <div className="header-note"><i /><span>A little learning, a lot of wonder</span><Snowflake size={16} strokeWidth={1.4} /></div>
       </header>
       <main>
         <section className="hero" aria-labelledby="home-title">
-          <div className="eyebrow">Your interview prep, unwrapped</div>
-          <h1 id="home-title">Nine AI concepts.<br /><em>One better interview.</em></h1>
-          <p className="hero-sub">A tiny advent calendar for future AI product managers.<br className="desktop-break" /> <strong>Pick a door. Learn something useful.</strong></p>
-          <div className="progress-line" aria-live="polite" data-testid="status-progress">
-            <div className="track" aria-hidden="true"><span style={{ width: `${opened.length / 9 * 100}%` }} /></div>
-            <b>{opened.length} / 9</b><span>doors opened</span>
-          </div>
+          <h1 id="home-title">Learn one AI concept a day.</h1>
+          <p className="hero-sub">9 days. 9 concepts.</p>
+          <a className="hero-door-link" href="#doors" data-testid="link-open-a-door">Open a door →</a>
+          <div className="progress-line" aria-live="polite" aria-label={`${opened.length} of 9 doors opened`} data-testid="status-progress">{opened.length} / 9</div>
         </section>
 
-        <div className="scene" aria-label="Illustrated advent house with nine interactive doors">
+        <div className="scene" id="doors" aria-label="Illustrated advent house with nine interactive doors">
           <div className="moon" aria-hidden="true" />
           <span className="star s1" aria-hidden="true">✦</span><span className="star s2" aria-hidden="true">✦</span><span className="star s3" aria-hidden="true">✦</span>
           <Tree className="far" /><Tree className="left" /><Tree className="right" />
@@ -126,15 +122,8 @@ function Home({ opened, openDoor }: { opened: number[]; openDoor: (number: numbe
             </div>
             <div className="house-plinth" aria-hidden="true" />
           </div>
-          <div className="scene-caption">No dates. No pressure. Just open a door.</div>
         </div>
       </main>
-      <footer className="home-bottom">
-        <div className="bottom-inner">
-          <div><p>Curiosity looks good on you. <span>Keep going.</span></p><small>Nine small lessons. Enough to sound like you belong in the room.</small></div>
-          <div className="bottom-arrow">Made for the merry and the motivated <ArrowRight size={16} /></div>
-        </div>
-      </footer>
     </div>
   );
 }
