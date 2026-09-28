@@ -459,6 +459,95 @@ function EmbeddingsLesson({ openDoor }: { openDoor: (number: number) => void }) 
   );
 }
 
+function TokensLesson({ openDoor }: { openDoor: (number: number) => void }) {
+  const next = lessons.find(item => item.number === 6);
+  const pieces = [
+    { text: 'Un', id: '482' },
+    { text: 'forget', id: '9,021' },
+    { text: 'table', id: '1,347' },
+    { text: '!', id: '0' },
+  ];
+  return (
+    <div className="lesson-site tokens-site lesson-page-enter">
+      <header className="lesson-header">
+        <Brand />
+        <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> Back to the house</Link>
+      </header>
+      <main className="lesson-main tokens-main" data-testid="content-lesson-5">
+        <div className="lesson-topline"><span>The AI advent / Door 5</span><span>5 of nine doors</span></div>
+        <section className="tokens-hero" aria-labelledby="tokens-title">
+          <div className="tokens-hero-copy">
+            <span className="tokens-eyebrow">a closer look at Tokens</span>
+            <h1 id="tokens-title">Tokens<span>.</span></h1>
+            <p>Why AI counts pieces of words instead of whole sentences.</p>
+            <div className="tokens-hero-foot"><span>THE AI ADVENT</span><span>DOOR 5 / 9</span></div>
+          </div>
+          <div className="tokens-still-life" role="img" aria-label="A tartan-wrapped parcel with a brass ribbon rests alongside an old open book and loose paper labels">
+            <div className="tokens-art-book" aria-hidden="true"><div className="tokens-art-page left" /><div className="tokens-art-page right" /><span /></div>
+            <div className="tokens-art-parcel" aria-hidden="true"><span className="tokens-art-ribbon-vertical" /><span className="tokens-art-ribbon-horizontal" /><span className="tokens-art-tag">5</span></div>
+            <div className="tokens-art-slip" aria-hidden="true"><i />Un · forget · table · !</div>
+            <span className="tokens-art-caption">An exercise in pieces &amp; patterns</span>
+          </div>
+        </section>
+
+        <section className="tokens-intro" aria-label="Tokens in plain English">
+          <div className="tokens-intro-copy">
+            <span className="section-kicker">in plain English</span>
+            <p>Tokens are the small chunks of text a model reads and writes. A token might be a whole word, part of a word, a space, or punctuation, depending on the tokenizer.</p>
+          </div>
+          <aside className="tokens-intro-note"><span>THE ESSENTIAL IDEA</span><p>One word is not always one piece.</p></aside>
+        </section>
+
+        <figure className="tokens-figure">
+          <div className="tokens-figure-heading"><div><span className="section-kicker">A visual guide / illustrative example</span><h2>language, cut into reusable pieces</h2></div><span className="tokens-figure-mark" aria-hidden="true">✳</span></div>
+          <div className="tokens-figure-body">
+            <div className="tokens-ruler" aria-label="Illustrative scale with marks at 0, 5, 10, and 15"><span>0</span><span>5</span><span>10</span><span>15</span></div>
+            <div className="tokens-original"><span>ORIGINAL TEXT</span><strong>Unforgettable!</strong></div>
+            <div className="tokens-cut-line" aria-hidden="true"><span /> <span /> <span /> <span /></div>
+            <div className="tokens-pieces" role="group" aria-label="Illustrative token segments and example IDs">
+              {pieces.map((piece, index) => <div className="tokens-piece" key={piece.text}>
+                <div className="tokens-piece-face"><small>PIECE {index + 1}</small><strong>{piece.text}</strong></div>
+                <span className="tokens-piece-id">ID {piece.id}</span>
+              </div>)}
+            </div>
+            <div className="tokens-figure-summary"><strong>4 tokens, not 1 word</strong><span>Illustrative split and IDs only — actual results vary by model tokenizer.</span></div>
+          </div>
+          <figcaption>Text becomes pieces; pieces become numbers a model can work with.</figcaption>
+        </figure>
+
+        <section className="tokens-section" aria-labelledby="tokens-how-heading">
+          <div className="tokens-section-title"><span className="section-kicker">1 / under the hood</span><h2 id="tokens-how-heading">How it<br /><em>works</em></h2></div>
+          <ol className="tokens-steps">
+            <li><span>1</span><p>Split text into repeatable chunks using a tokenizer.</p></li>
+            <li><span>2</span><p>Map each chunk to an ID the model can process.</p></li>
+            <li><span>3</span><p>Predict and assemble the next token until the response is complete.</p></li>
+          </ol>
+        </section>
+        <section className="tokens-section tokens-uses" aria-labelledby="tokens-uses-heading">
+          <div className="tokens-section-title"><span className="section-kicker">2 / outside the lab</span><h2 id="tokens-uses-heading">Real-world<br /><em>use</em></h2></div>
+          <div className="tokens-use-list">
+            <article><span className="tokens-use-mark" aria-hidden="true" /><div><h3>Usage and pricing</h3><p>Measure how much text an API request sends and receives.</p></div></article>
+            <article><span className="tokens-use-mark" aria-hidden="true" /><div><h3>Context limits</h3><p>Decide whether a conversation or document fits in a model’s window.</p></div></article>
+            <article><span className="tokens-use-mark" aria-hidden="true" /><div><h3>Streaming responses</h3><p>Show an answer arriving piece by piece as new tokens are generated.</p></div></article>
+          </div>
+        </section>
+        <section className="tokens-picture" aria-labelledby="tokens-picture-heading">
+          <span className="section-kicker">3 / picture it</span>
+          <h2 id="tokens-picture-heading">Think of it like this: <em>Text cut into manageable pieces</em></h2>
+          <p>A model does not read text exactly one word at a time. Before processing it, a tokenizer breaks the text into reusable pieces called tokens. A common word may be one token, while a longer or unusual word may be split into several. The model receives these pieces as numbers and predicts one new token at a time to build its response.</p>
+          <div className="tokens-process" aria-label="Text is cut into pieces, represented as tokens, mapped to numbers, and used for prediction">
+            {['TEXT', 'CUT INTO PIECES', 'TOKENS', 'NUMBERS', 'PREDICTION'].map((stage, index) => <span key={stage}>{index > 0 && <i aria-hidden="true">→</i>}{stage}</span>)}
+          </div>
+        </section>
+        <nav className="lesson-footer" aria-label="Lesson navigation">
+          <Link href="/" className="back-link" data-testid="link-back-home-bottom"><ArrowLeft size={16} /> Back to the house</Link>
+          {next && <Link href={`/lesson/${next.number}`} className="next-link" onClick={() => { openDoor(next.number); window.scrollTo(0, 0); }} data-testid={`link-next-lesson-${next.number}`}><small>Open the next door →</small><span>{next.title}</span></Link>}
+        </nav>
+      </main>
+    </div>
+  );
+}
+
 function ContextWindowLesson({ openDoor }: { openDoor: (number: number) => void }) {
   const next = lessons.find(item => item.number === 5);
   return (
@@ -561,6 +650,7 @@ function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
   if (number === 2) return <InferenceLesson openDoor={openDoor} />;
   if (number === 3) return <EmbeddingsLesson openDoor={openDoor} />;
   if (number === 4) return <ContextWindowLesson openDoor={openDoor} />;
+  if (number === 5) return <TokensLesson openDoor={openDoor} />;
   const next = lessons[number] ?? null;
 
   return (

@@ -62,15 +62,15 @@ export const lessons: Lesson[] = [
   },
   {
     number: 5,
-    title: 'LLMs & tokens',
-    doorTitle: 'LLMs & tokens',
-    subtitle: 'How a language model reads, writes, and charges by the piece.',
-    analogyTitle: 'An astonishing autocomplete.',
-    analogy: 'Imagine someone who has read an enormous library and is very good at guessing the next bit of a sentence. An LLM does this with tokens: small chunks of text, not always whole words.',
-    explanation: 'A large language model is a neural network trained to predict tokens from context. Text is split into tokens, which can be words, word fragments, punctuation, or symbols. The model assigns probabilities to possible next tokens and generates a response one token at a time. It learns statistical patterns, not a verified database of facts.',
-    pmRelevance: 'Tokens affect latency, context limits, and price. Longer prompts and longer outputs usually cost more. A PM should set response-length expectations and measure both quality and cost per successful task.',
-    example: 'A customer-support assistant receives a 1,200-token conversation and returns a 180-token draft. Both input and output tokens count toward usage, and a concise draft is faster and cheaper to review.',
-    answer: '“An LLM predicts the next token using the context it has been given. Tokens are chunks of text, and their count drives context usage, latency, and cost. I would optimize for task success per dollar, not just model fluency.”'
+    title: 'Tokens',
+    doorTitle: 'Tokens',
+    subtitle: 'Why AI counts pieces of words instead of whole sentences.',
+    analogyTitle: 'Text cut into manageable pieces',
+    analogy: 'A model does not read text exactly one word at a time. Before processing it, a tokenizer breaks the text into reusable pieces called tokens. A common word may be one token, while a longer or unusual word may be split into several. The model receives these pieces as numbers and predicts one new token at a time to build its response.',
+    explanation: 'Tokens are the small chunks of text a model reads and writes. A token might be a whole word, part of a word, a space, or punctuation, depending on the tokenizer.',
+    pmRelevance: 'Token counts affect API usage and pricing, context limits, and the speed of streaming responses. Plan for both the text sent to a model and the text it generates.',
+    example: 'An illustrative tokenizer might split “Unforgettable!” into “Un”, “forget”, “table”, and “!” before mapping each piece to an ID.',
+    answer: '“Tokens are the text pieces a model processes. A tokenizer maps them to IDs, and the model predicts its response one token at a time. I would track both input and output token usage to understand context limits and cost.”'
   },
   {
     number: 6,

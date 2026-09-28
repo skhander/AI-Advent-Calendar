@@ -1,0 +1,314 @@
+Redesign the "Tokens" page into a sophisticated, very British Christmas edition.
+
+IMPORTANT:
+Preserve the existing page's layout, typography, hierarchy, spacing, navigation, and overall editorial structure.
+
+Do NOT redesign the website from scratch.
+
+The goal is to create a completely different seasonal visual identity from the Hanukkah page while keeping the same underlying design system.
+
+CONCEPT:
+
+"Tartan Christmas in an old English country house."
+
+Think:
+- British Christmas
+- tartan wool
+- old books
+- country houses
+- Christmas morning
+- antique brass
+- deep evergreen
+- oxblood
+- warm cream
+- subtle paper texture
+
+Reference the visual world of:
+- classic British country-house interiors
+- heritage British fashion
+- luxury Christmas wrapping paper
+- old illustrated books
+- vintage railway posters
+- sophisticated department-store Christmas windows
+
+NOT:
+- generic American Christmas
+- Santa Claus
+- candy canes
+- cartoon Christmas
+- excessive snowflakes
+- cheesy Christmas graphics
+- red/green clip art
+
+COLOR PALETTE:
+
+Warm paper / cream:
+#F4EFE3
+
+Deep bottle green:
+#17352A
+
+Oxblood / burgundy:
+#6E2028
+
+Muted tartan red:
+#8E3435
+
+Antique brass:
+#B08A4A
+
+Very dark green:
+#10261E
+
+Muted parchment:
+#D8CDB9
+
+The dominant colors should be:
+cream + bottle green + oxblood.
+
+Use brass only as a small accent.
+
+TARTAN:
+
+Make tartan the signature visual motif of the page.
+
+Use a sophisticated traditional tartan inspired by British heritage textiles.
+
+The tartan should use:
+- deep forest green
+- burgundy
+- muted red
+- cream
+- very thin dark navy/green lines
+
+IMPORTANT:
+Do not make the tartan bright, playful, or costume-like.
+
+It should look like an expensive wool textile.
+
+Use tartan selectively:
+- as a cropped hero background
+- as a narrow graphic panel
+- as a subtle border
+- inside an illustration
+- as a texture behind one section
+
+Do NOT cover the entire page in tartan.
+
+Think "Burberry scarf" rather than "Christmas tablecloth."
+
+HERO:
+
+The hero currently says:
+
+"a closer look at Tokens
+
+# Tokens
+
+Why AI counts pieces of words instead of whole sentences."
+
+Keep this exact copy and hierarchy.
+
+Keep the oversized serif "Tokens" headline.
+
+Keep the small editorial eyebrow.
+
+Keep the large amount of whitespace.
+
+Change the hero artwork into a sophisticated British Christmas composition.
+
+Possible direction:
+
+A close-up / cropped illustration of a beautifully wrapped Christmas parcel sitting on a dark wooden library table.
+
+The wrapping paper is subtle green-and-burgundy tartan.
+
+A thin antique-brass ribbon or small brass tag catches the light.
+
+Nearby:
+- a few small paper tags
+- an open old book
+- perhaps a subtle Christmas branch
+
+But keep the composition extremely restrained.
+
+The visual should feel like a still life from a luxury British Christmas campaign.
+
+Do NOT use:
+- Santa
+- snowmen
+- reindeer
+- cartoon trees
+- candy canes
+- giant ornaments
+
+TOKENS VISUAL METAPHOR:
+
+The visual should connect to the concept of "pieces" and "chunks."
+
+Instead of simply showing Christmas objects, use the tartan as a metaphor for tokens.
+
+For example:
+A tartan pattern can be shown being "cut" into individual rectangular pieces.
+
+Or:
+
+A beautiful piece of tartan fabric is divided into small labeled squares, visually representing how language is broken into reusable pieces.
+
+This should feel clever, not literal.
+
+The hero could show:
+"Unforgettable!"
+broken into elegant little paper/fabric tiles,
+with numbers beneath them.
+
+For example:
+
+Unforgettable!
+
+→ 48
+→ 29
+→ 02
+→ 11
+→ 34
+
+Make the tokenization visualization feel like part of a beautifully designed Christmas wrapping-paper system.
+
+THE "IN PLAIN ENGLISH" SECTION:
+
+Keep the existing structure.
+
+Add a subtle tartan treatment to the visual component rather than decorating the entire section.
+
+For example:
+- a tartan swatch behind the token illustration
+- small brass labels
+- cream cards
+- deep green typography
+- thin oxblood rules
+
+The explanatory text should remain very clean.
+
+UNDER THE HOOD:
+
+Keep the numbered 01 / 02 / 03 structure.
+
+Make the numbers feel like elegant British library catalog labels.
+
+Use:
+- small serif or mono numbers
+- thin brass rules
+- deep green text
+- subtle burgundy accents
+
+Avoid decorative Christmas icons.
+
+OUTSIDE THE LAB:
+
+Keep the existing content and structure.
+
+Use the seasonal palette through:
+- borders
+- tiny accent lines
+- subtle background shifts
+- occasional tartan texture
+
+Do not make the text itself difficult to read.
+
+"PICTURE IT":
+
+This is where you can make the Christmas concept slightly more visual.
+
+Create an elegant diagram showing:
+
+TEXT
+↓
+CUT INTO PIECES
+↓
+TOKENS
+↓
+NUMBERS
+↓
+PREDICTION
+
+Use small cream cards with dark green text.
+
+Introduce tartan as the connecting visual system.
+
+The diagram should feel like a beautifully designed Christmas gift-wrap pattern being systematically cut into pieces.
+
+TYPOGRAPHY:
+
+DO NOT change the existing typography.
+
+Preserve:
+- oversized editorial serif headlines
+- tiny monospace uppercase labels
+- generous line height
+- strong hierarchy
+- thin rules
+- editorial spacing
+
+The serif headline should remain the hero.
+
+Do not introduce playful Christmas fonts.
+
+Do not use script fonts.
+
+Do not use novelty holiday typography.
+
+GRAPHIC DETAILS:
+
+Add very subtle British Christmas details:
+- tiny brass stars
+- a small holly branch
+- antique paper labels
+- subtle stitching / textile lines
+- thin brass rules
+- tiny catalog numbers
+- old-library-inspired labels
+
+But use these sparingly.
+
+The page should still look like an AI editorial publication first and a Christmas experience second.
+
+VISUAL BALANCE:
+
+Aim for:
+
+70% sophisticated editorial design
+20% British heritage / tartan
+10% Christmas
+
+The Christmas feeling should come primarily from:
+- tartan
+- color
+- material
+- warmth
+- illustration style
+
+NOT from Christmas icons.
+
+OVERALL FEEL:
+
+Imagine opening an elegant Christmas gift in an old English country house.
+
+The wrapping paper is beautiful dark tartan.
+The room is warm.
+There is an old book nearby.
+There is a little brass detail.
+Everything feels tactile, quiet, expensive, and nostalgic.
+
+Then you realize the page is explaining how AI breaks language into pieces.
+
+That juxtaposition is the point.
+
+The final page should feel:
+
+"AI Advent meets British Christmas editorial."
+
+NOT:
+
+"AI Advent Christmas theme."
+
+Preserve all existing functionality and responsive behavior.
