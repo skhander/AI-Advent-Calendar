@@ -148,7 +148,7 @@ function RagLesson({ openDoor }: { openDoor: (number: number) => void }) {
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> Back to the house</Link>
       </header>
       <main className="lesson-main rag-main" data-testid="content-lesson-1">
-        <div className="lesson-topline"><span>The AI advent / Door 1</span><span>Field notes for future AI PMs</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door 1</span></div>
         <section className="rag-hero" aria-labelledby="rag-title">
           <svg className="rag-evergreen" viewBox="0 0 264 125" fill="none" aria-hidden="true" focusable="false">
             <path d="M4 15C70 41 139 63 252 87" stroke="#456c55" strokeWidth="3" strokeLinecap="round" />
@@ -159,7 +159,6 @@ function RagLesson({ openDoor }: { openDoor: (number: number) => void }) {
             <path d="M211 79v19" stroke="#c69e64" strokeWidth="1.5" /><circle cx="211" cy="108" r="9" fill="#c49b60" stroke="#e9d5ad" strokeWidth="2" /><path d="M205 105c3-3 6-4 10-3" stroke="#f4e3c1" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           <div className="rag-hero-copy">
-            <span className="rag-overline"><span aria-hidden="true">✳</span> An idea worth unwrapping</span>
             <h1 id="rag-title">RAG<span className="rag-title-dot">.</span></h1>
             <p className="rag-subtitle">How AI finds the right facts before it answers.</p>
           </div>
@@ -178,12 +177,14 @@ function RagLesson({ openDoor }: { openDoor: (number: number) => void }) {
               <div className="rag-source-stack" aria-label="Trusted documents">
                 <div className="rag-paper rag-paper-back"><span className="rag-paper-lines" />policies</div>
                 <div className="rag-paper rag-paper-front"><span className="rag-paper-lines" />handbook</div>
-                <span className="rag-source-docs">policies · handbook</span>
-                <span className="rag-source-tag">trusted source</span>
+                <div className="rag-source-caption">
+                  <span>policies · handbook</span>
+                  <small>trusted source</small>
+                </div>
               </div>
               <div className="rag-diagram-path" aria-hidden="true"><span /><ArrowRight size={19} strokeWidth={1.6} /></div>
               <div className="rag-answer-side">
-                <div className="rag-question">“parental leave?”</div>
+                <div className="rag-question">“FMLA leave?”</div>
                 <div className="rag-answer-card">
                   <span className="rag-answer-spark" aria-hidden="true">✳</span>
                   <strong>12 weeks</strong>
@@ -249,7 +250,7 @@ function LessonPage({ openDoor }: { openDoor: (number: number) => void }) {
         <Link href="/" className="back-link" data-testid="link-back-home-top"><ArrowLeft size={16} /> Back to the house</Link>
       </header>
       <main className="lesson-main" data-testid={`content-lesson-${number}`}>
-        <div className="lesson-topline"><span>The AI advent / Door {number}</span><span>Field notes for future AI PMs</span></div>
+        <div className="lesson-topline"><span>The AI advent / Door {number}</span></div>
         <div className="lesson-heading">
           <div><h1>{lesson.title}</h1><p className="lesson-lede">{lesson.subtitle}</p></div>
           <div className="lesson-stamp" aria-hidden="true"><strong>{number}</strong><small>of nine doors</small></div>
