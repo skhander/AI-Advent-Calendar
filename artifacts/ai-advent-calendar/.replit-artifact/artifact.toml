@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "AI Advent Calendar"
+description = "A festive nine-door advent calendar that teaches foundational AI concepts and helps aspiring AI product managers prepare for interviews."
+version = "1.0.0"
+id = "artifacts/ai-advent-calendar"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20935
+
+[services.development]
+run = "pnpm --filter @workspace/ai-advent-calendar run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ai-advent-calendar", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ai-advent-calendar/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20935"
+BASE_PATH = "/"

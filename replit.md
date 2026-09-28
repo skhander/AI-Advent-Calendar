@@ -1,15 +1,16 @@
-# [Project name]
+# AI Advent Calendar
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A holiday-themed interactive house with nine short AI fundamentals lessons for aspiring AI product managers.
 
 ## Run & Operate
 
+- `pnpm --filter @workspace/ai-advent-calendar run dev` — run the frontend through its managed workflow
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- The current web app is frontend-only; opened-door progress is saved to the visitor's browser with localStorage.
 
 ## Stack
 
@@ -22,19 +23,21 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/ai-advent-calendar/` — the interactive web experience.
+- `artifacts/api-server/` and `lib/` — shared workspace scaffolding, not required by this app yet.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Doors are available immediately rather than unlocked by date, because the product is an interview cram experience.
+- Browser-local progress avoids creating accounts or storing personal data for this lightweight learning experience.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Visitors open nine numbered doors of a snowy holiday house, learn an AI concept in each lesson, and see previously opened doors remain open on return.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Holiday house and Christmas colors inspired by the attached miniature advent-calendar photo; homepage headline should be simple, punchy, and concise.
 
 ## Gotchas
 
