@@ -1,0 +1,29 @@
+kind = "video"
+videoAspectRatio = "16:9"
+previewPath = "/ai-advent-demo/"
+title = "The AI Advent — Product Demo"
+description = "A 40-second editorial walkthrough of the real AI Advent Calendar, opening two doors and exploring their concept pages."
+version = "1.0.0"
+id = "artifacts/ai-advent-demo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/ai-advent-demo/" ]
+localPort = 22667
+
+[services.development]
+run = "pnpm --filter @workspace/ai-advent-demo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ai-advent-demo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ai-advent-demo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22667"
+BASE_PATH = "/ai-advent-demo/"

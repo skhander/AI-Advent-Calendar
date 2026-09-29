@@ -1,0 +1,9 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "EmnR562tJgUpvTXuRVEts"
+uri = "file://artifacts/ai-advent-demo/public/audio/bg_music.mp3"
+type = "audio"
+title = "minimal editorial music bed"
+description = "Generated music: Subtle ambient instrumental underscore for a 40-second editorial product walkthrough of a thoughtful AI learning calendar. Warm felt piano, soft low sustained analog pads, very restr…"
