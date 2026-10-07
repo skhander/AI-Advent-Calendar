@@ -1,1 +1,2 @@
 - [Calendar visual scope](calendar-visual-scope.md) — keep the holiday house on home; use diagram-first, non-seasonal layouts for individual concept lessons.
+- [Demo audio scope](demo-audio-scope.md) — keep the AI Advent Calendar product demo silent; the user asked to remove music.

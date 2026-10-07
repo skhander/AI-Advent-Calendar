@@ -2,7 +2,7 @@
 
 ## Director's treatment
 
-- **Format:** 16:9 landscape, 40 seconds. A portfolio piece, silent in meaning and optionally accompanied by restrained instrumental music.
+- **Format:** 16:9 landscape, 40 seconds. A silent portfolio piece with no audio.
 - **Promise:** Nine illustrated doors lead to nine substantial, distinct AI lessons.
 - **Identity:** Only pixels captured from the running AI Advent Calendar. Deep evergreen and cream on the home; warm off-white, dark blue-green, and terracotta in the lessons. No new title cards, UI, gradients, stock imagery, or substitute fonts.
 - **Hero:** The actual illustrated house and the real lesson pages. A small, calm cursor is the viewer's guide.
@@ -10,7 +10,7 @@
 - **Arc:** Full homepage hold → deliberate first door → a real lesson explored in depth → return → second door → complete homepage as a resolved portfolio closing frame.
 - **Payoff:** The same nine-door house returns after seeing two very different lessons, now understood as a collection rather than a static illustration.
 
-All interface text is captured from the running app. No voiceover or editorial captions. The cursor is the only added graphic. Gentle music is optional to comprehension; there are no sound-dependent beats.
+All interface text is captured from the running app. No music, sound effects, voiceover, or editorial captions. The cursor is the only added graphic.
 
 | Shot | Time | Focus | Main movement | Handoff |
 | --- | --- | --- | --- | --- |
@@ -29,7 +29,7 @@ All interface text is captured from the running app. No voiceover or editorial c
 - **Choreography:** 0.0–2.3 still/readable hold (only the tiny background motion present in the captured page is frozen); 2.3 cursor appears unobtrusively near lower-right; 2.5–5.7 cursor moves in a natural two-segment eased path to the RAG door; 5.7–6.35 short poised hold; 6.35–6.55 one restrained click halo; 6.55–7.2 screenshot gently compresses toward the door by no more than 3% and fades into the lesson. The house remains visible through the handoff.
 - **Transition:** RAG door click point is carried into the lesson by the same cursor position; overlapping dissolve and tiny scale adjustment, no blank frame.
 - **Assets/technique:** One actual 1600×900 home capture from the running app; timeline-driven SVG cursor; Framer Motion opacity/transform.
-- **Sound intent:** Restrained instrumental starts quietly. No click sound.
+- **Sound intent:** Silence.
 
 ### Shot 02 — 07.2–22.5, 15.3 s — RAG is more than a door
 
@@ -40,7 +40,7 @@ All interface text is captured from the running app. No voiceover or editorial c
 - **Choreography:** 7.2–8.0 incoming page settles, cursor clears; 8.0–9.6 title hold; 9.6–13.2 controlled scroll to bring intro and diagram center-frame; 13.2–14.3 diagram hold; 14.3–17.7 continue to numbered content; 17.7–19.2 content hold; 19.2–21.3 smooth scroll back to page top; 21.3–22.1 cursor crosses to “All concepts” at upper-right; 22.1 click; 22.1–22.5 small dissolve.
 - **Transition:** A click on the existing navigation link leads directly back to the full home capture, preserving the pointer's last position for a moment.
 - **Assets/technique:** Full-page 1600px-wide capture from running `/lesson/1`, translated behind a 900px-high viewport; cursor only.
-- **Sound intent:** Music remains understated with no claimed beat-sync.
+- **Sound intent:** Silence.
 
 ### Shot 03 — 22.5–29.2, 6.7 s — Another door
 
@@ -51,7 +51,7 @@ All interface text is captured from the running app. No voiceover or editorial c
 - **Choreography:** 22.5–23.1 house resolves; 23.1–24.7 hold; 24.7–27.9 cursor moves purposefully toward the Evals / safety door; 27.9–28.4 poised hold; 28.4–28.6 restrained click halo; 28.6–29.2 gentle 3% pull toward door and overlap dissolve.
 - **Transition:** Second door click carries into the differently colored, diagram-first Evals page.
 - **Assets/technique:** Same exact home capture as shot 01; cursor component reused.
-- **Sound intent:** A slight musical lift, no sound effect.
+- **Sound intent:** Silence.
 
 ### Shot 04 — 29.2–35.0, 5.8 s — Another concept
 
@@ -62,7 +62,7 @@ All interface text is captured from the running app. No voiceover or editorial c
 - **Choreography:** 29.2–29.9 settle from door; 29.9–31.0 headline hold; 31.0–33.3 smooth partial scroll toward the diagram; 33.3–34.0 hold; 34.0–34.5 scroll back to top; 34.5–34.8 cursor reaches and clicks “All concepts”; 34.8–35.0 overlap dissolve.
 - **Transition:** Existing navigation leads back to the full house; no title card.
 - **Assets/technique:** Full-page 1600px-wide capture from running `/lesson/9`; cursor.
-- **Sound intent:** Music stays calm.
+- **Sound intent:** Silence.
 
 ### Shot 05 — 35.0–40.0, 5 s — The complete collection
 
@@ -73,7 +73,7 @@ All interface text is captured from the running app. No voiceover or editorial c
 - **Choreography:** 35.0–35.7 home returns and settles from a near-imperceptible scale; 35.7–39.75 generous still hold; 39.75–40.0 cursor absent and framing matches shot 01 precisely, so the preview loop is seamless.
 - **Transition:** Exact same home frame at end and beginning; no black or blank gap.
 - **Assets/technique:** Same home capture as shots 01 and 03.
-- **Sound intent:** Instrumental decays toward the loop boundary.
+- **Sound intent:** Silence.
 
 ## Preproduction review
 

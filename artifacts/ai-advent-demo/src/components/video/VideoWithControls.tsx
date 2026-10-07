@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { ChevronDown, ChevronUp, Pause, Play, Repeat, Volume2, VolumeX } from 'lucide-react';
+import { ChevronDown, ChevronUp, Pause, Play, Repeat } from 'lucide-react';
 
 import VideoTemplate, { SCENE_DURATIONS } from './VideoTemplate';
 import { useSceneControls } from './useSceneControls';
@@ -59,7 +59,6 @@ function PlaybackStatus({
 export default function VideoWithControls() {
   const isIframed = typeof window !== 'undefined' && window.self !== window.top;
   const controls = useSceneControls(SCENE_DURATIONS);
-  const [muted, setMuted] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const [hovering, setHovering] = useState(false);
   const [tapPinned, setTapPinned] = useState(false);
@@ -113,7 +112,6 @@ export default function VideoWithControls() {
         durations={controls.durations}
         loop
         paused={controls.paused}
-        muted={muted}
         onSceneChange={controls.onSceneChange}
       />
       <div
@@ -132,9 +130,6 @@ export default function VideoWithControls() {
           </button>
           <button title="Loop current scene" aria-label="Loop current scene" aria-pressed={controls.locked} onClick={controls.toggleLock}>
             <Repeat />
-          </button>
-          <button title={muted ? 'Unmute' : 'Mute'} aria-label={muted ? 'Unmute' : 'Mute'} onClick={() => setMuted(value => !value)}>
-            {muted ? <VolumeX /> : <Volume2 />}
           </button>
           <span className="control-divider" />
           <PlaybackStatus
